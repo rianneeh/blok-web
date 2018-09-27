@@ -1,0 +1,422 @@
+body {
+	background-image: url("../images/achtergrond.jpg");
+	background-position: 0 6em;
+	background-repeat: no-repeat;
+	background-size: 90em;
+	font-family: nexabold, sans-serif;
+	margin: 0;
+}
+
+h1 {
+	color: white;
+	font-size: 2.375rem;
+	text-align: center;
+}
+
+h2 {
+	color: #00d66c;
+	font-size: 2.375rem;
+	margin: 0;
+	padding: 1.2em 0.7em 0.6em;
+}
+
+h3 {
+	color: #ff3268;
+	font-size: 1.35em;
+	margin: .55em 0 .5em;
+	padding-left: 0.5em;
+}
+
+p {
+	color: #202020;
+	font-family: nexaregular;
+}
+
+a {
+	text-decoration: none;
+	transition: all .3s;
+}
+
+button {
+	font-family: nexabold;
+	transition: all .25s;
+}
+
+article {
+	background-color: white;
+	border-radius: 1em;
+	flex-shrink: 0;
+	height: 19em;
+	margin: 0 1.5em;
+	position: relative;
+	width: 17em;
+}
+
+img {
+	display: inline-block;
+	width: 100%;
+}
+
+ul {
+	background-color: white;
+	list-style: none;
+	margin: 0;
+}
+
+/* bovenste deel van de header(groen)*/
+
+header section {
+	background-color: #00d66c;
+	display: flex;
+}
+
+header img {
+	padding: 1.3em 1em 1em 1em;
+	width: 2.3em;
+}
+
+header img:first-child {
+	height: 100%;
+	width: 10em;
+}
+
+header img:nth-of-type(1) {
+	margin-right: auto;
+}
+
+/* titels 'Mijn verhalen' en 'Profiel' alleen weergeven bij breeder display*/
+
+header section h2 {
+	display: none;
+}
+
+/* onderste deel van de header(wit)*/
+
+nav a {
+	color: #00d66c;
+}
+
+nav > ul {
+	display: flex;
+	justify-content: space-around;
+	padding: 0.8em 0;
+}
+
+nav a:hover {
+	color: #2800a0;
+}
+
+nav > ul > li {
+	position: relative;
+
+}
+
+nav ul li:hover > ul {
+	display: block;
+}
+
+nav ul ul {
+	border-radius: .8em;
+	display: none;
+	font-family: nexaregular;
+	line-height: 200%;
+	margin-left: -1em;
+	margin-top: 1em;
+	padding: 0 1em;
+	position: absolute;
+	top: 0;
+}
+
+nav ul ul:hover {
+	opacity: 1;
+}
+
+/* formulier */
+
+form {
+	background-color: rgba(255, 255, 255, 0.9);
+	border-radius: 1em;
+	margin: 0 auto 2.7em;
+	width: 20em;
+}
+
+form[action=get]:nth-of-type(1) {
+	margin-top: 2em;
+}
+
+fieldset {
+	border: none;
+	display: flex;
+}
+
+legend {
+	color: #ff3268;
+	font-size: 1.5em;
+	padding: 0.7em 0 0.5em;
+	text-align: center;
+}
+
+label {
+	color: #202020;
+	font-size: 0.95em;
+	padding: 0 0 0.3em;
+}
+
+input[type=text] {
+	border: 0.5px solid #969696;
+	border-radius: 0.5em;
+	color: #969696;
+	font-family: nexaregular, sans-serif;
+	font-size: 1rem;
+	margin-bottom: 1em;
+	padding: 0.5em;
+	width: 95%;
+}
+
+input[type=text]:hover {
+	color: #e6e6e6;
+}
+
+select {
+	border: 0.5px solid #969696;
+	color: #969696;
+	font-family: nexaregular, sans-serif;
+	font-size: 1em;
+	margin-bottom: 1em;
+	width: 45%;
+}
+
+form p {
+	color: #202020;
+	font-family: nexabold, sans-serif;
+	font-size: 1em;
+	margin: 0;
+	padding: 0 0 0.3em;
+}
+
+p label {
+	color: #606060;
+	font-family: nexaregular, sans-serif;
+	margin-left: 0.4em;
+}
+
+input[type=submit] {
+	background-color: #ff3268;
+	border: none;
+	border-radius: 1em;
+	box-shadow: 0 0.1875em 0.0625em #ca2b55;
+	color: white;
+	font-family: nexabold;
+	font-size: 1.4em;
+	margin: 0.5em auto;
+	padding: 0.3em 1.2em;
+	transition: all .5s;
+}
+
+input[type=submit]:hover {
+	background-color: #ff658e;
+}
+
+input[type=submit]:active {
+	box-shadow: 0 -0.1875em 0.0625em #ca2b55;
+}
+
+/*sections*/
+
+section:nth-of-type(2) {
+	background-color: #f3e5d8;
+	height: 41em;
+}
+
+section:nth-of-type(2) footer a {
+	background-color: #00d66c;
+	box-shadow: 0 0.1875em 0.0625em #1e9162;
+}
+
+section:nth-of-type(2) footer a:hover {
+	background-color: #4de298;
+}
+
+section:nth-of-type(2) footer a:active {
+	box-shadow: 0 -0.1875em 0.0625em #1e9162;
+}
+
+section:nth-of-type(2) h3 {
+	color: #00d66c;
+}
+
+section:nth-of-type(3) {
+	background-color: white;
+	height: 40em;
+}
+
+section:nth-of-type(3) h2 {
+	color: #ff3268;
+}
+
+section > footer {
+	margin: 3.5em 0 0;
+}
+
+section footer a {
+	background-color: #ff3268;
+	border-radius: 2em;
+	box-shadow: 0 0.1875em 0.0625em #ca2b55;
+	color: white;
+	display: block;
+	font-family: nexabold;
+	font-size: 1.2em;
+	margin: 0 auto;
+	padding: 0.6em 1.2em;
+	width: 6.2em;
+}
+
+section footer a:hover {
+	background-color: #ff658e;
+}
+
+section footer a:active {
+	box-shadow: 0 -0.1875em 0.0625em #ca2b55;
+}
+
+/* articles scrollbaar maken */
+
+section div {
+	display: flex;
+	overflow-x: scroll;
+}
+
+/* articles: ontdekken sorteer filter*/
+
+#sorteren {
+	display: flex;
+	justify-content: flex-end;
+	margin: 1em 1em 2em;
+
+}
+
+#sorteren p {
+	font-family: nexabold;
+	margin: 0.5em 1em 0;
+}
+
+#sorteren button {
+	background-color: #ffffff;
+	border: none;
+	box-shadow: none;
+	font-family: nexaregular;
+	font-size: 1em;
+	padding: 0.3em .8em;
+}
+
+#sorteren button:nth-of-type(1) {
+	background-color: #969696;
+	border-bottom-left-radius: 1em;
+	border-top-left-radius: 1em;
+	color: white;
+}
+
+#sorteren button:nth-of-type(1):hover {
+	background-color: #adadad;
+}
+
+#sorteren button:nth-of-type(1):active {
+	color: black;
+}
+
+#sorteren button:nth-of-type(2) {
+	border-bottom-right-radius: 1em;
+	border-top-right-radius: 1em;
+}
+
+#sorteren button:nth-of-type(2):hover {
+	background-color: #e6e6e6;
+}
+
+#sorteren button:nth-of-type(2):active {
+	color: white;
+}
+
+
+/* articles: bundels*/
+
+section:nth-of-type(3) article {
+	background-color: #f5f8fa;
+	height: 24em;
+}
+
+article > img {
+	border-top-left-radius: 1em;
+	border-top-right-radius: 1em;
+	height: 11.5em;
+}
+
+article p {
+	padding: 0 0.6em;
+}
+
+/* knoppen articles*/
+
+article a,
+article button {
+	background-color: #969696;
+	border: none;
+	box-shadow: 0 0.1875em 0.0625em #606060;
+	color: white;
+	position: absolute;
+}
+
+article a {
+	border-radius: 2em;
+	bottom: 1em;
+	left: .8em;
+	padding: 0.45em 1.8em;
+}
+
+
+article button {
+	border-radius: 2rem;
+	bottom: 1em;
+	font-size: 0.9em;
+	padding: 0.5em 1.2em;
+	right: 1em;
+}
+
+article a:hover,
+article button:hover {
+	background-color: #cccccc;
+}
+
+article a:active,
+article button:active {
+	box-shadow: 0 -0.1875em 0.0625em #120145;
+	color: #ff3268;
+}
+
+article button img {
+	margin-right: 0.5em;
+	width: 1.1em;
+}
+
+/*footer van de pagina*/
+
+body > footer {
+	background-color: #00d66c;
+	display: flex;
+	flex-direction: column;
+}
+
+body > footer a {
+	color: white;
+	font-family: nexaregular;
+	padding: 1em 0 0 1em;
+}
+
+body > footer a:hover {
+	color: #2800a0;
+}
+
+footer > img {
+	margin: 1em auto;
+	width: 10em;
+}
