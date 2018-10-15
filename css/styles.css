@@ -161,8 +161,14 @@ form[action=get]:nth-of-type(1) {
 
 fieldset {
 	border: none;
-	display: flex;
 }
+
+fieldset div {
+	display: flex;
+	flex-direction: column;
+
+}
+
 
 legend {
 	color: #ff3268;
