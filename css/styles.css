@@ -437,7 +437,16 @@ article button img {
 	width: 1.1em;
 }
 
-/*footer van de pagina*/
+/*footer*/
+
+body {
+	position: relative;
+}
+
+body > footer {
+	position: absolute;
+	bottom: 0;
+}
 
 body > footer {
 	background-color: #00d66c;
@@ -464,6 +473,12 @@ footer > img {
 	body {
 		background-size: 250%;
 		background-position: -32em 5em;
+	}
+}
+
+@media(min-width: 32.1em) {
+	section:nth-of-type(2) {
+		height: 39.5em;
 	}
 }
 
