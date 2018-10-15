@@ -439,17 +439,6 @@ article button img {
 
 /*footer*/
 
-body {
-	position: relative;
-}
-
-body > footer {
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	left: 0;
-}
-
 body > footer {
 	background-color: #00d66c;
 	display: flex;
@@ -535,7 +524,7 @@ footer > img {
 	/* de twee formulieren op het loginscherm komen naast elkaar*/
 	header + div {
 		display: flex;
-		margin: 3em 0;
+		margin: 6em 0;
 	}
 }
 
