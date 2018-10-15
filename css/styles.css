@@ -14,7 +14,7 @@ body {
 	background-image: url("../images/achtergrond.jpg");
 	background-position: -32em 6em;
 	background-repeat: no-repeat;
-	background-size: 350%;
+	background-size: 380%;
 	font-family: "Nexa Bold", helvetica, sans-serif;
 	margin: 0;
 	transition: all 1s;
@@ -122,7 +122,6 @@ nav a:active {
 
 nav > ul > li {
 	position: relative;
-
 }
 
 nav ul li:hover > ul {
@@ -146,7 +145,7 @@ nav ul ul:hover {
 	opacity: 1;
 }
 
-/* formulier jaagaeafhg */
+/* formulier */
 
 form {
 	background-color: rgba(255, 255, 255, 0.9);
@@ -516,6 +515,11 @@ footer > img {
 		bottom: 1em;
 		right: 2em;
 	}
+	/* de twee formulieren op het loginscherm komen naast elkaar*/
+	header + div {
+		display: flex;
+		margin: 3em 0;
+	}
 }
 
 @media(min-width: 50em) {
@@ -536,11 +540,6 @@ footer > img {
 		position: absolute;
 		top: 2em;
 		right: 1em;
-	}
-
-	header + div {
-		display: flex;
-		margin: 3em 0;
 	}
 }
 
@@ -566,7 +565,7 @@ footer > img {
 		margin-right: 4%;
 		margin-top: -.001em;
 	}
-
+	/* formulier groeit mee met schermbreedte*/
 	form {
 		width: 40%;
 		max-width: 28em;
@@ -577,7 +576,7 @@ footer > img {
 	h1 {
 		font-size: 3em;
 	}
-
+	/* witte deel header komt in het groene deel*/
 	header {
 		position: relative;
 	}
@@ -592,5 +591,40 @@ footer > img {
 	header nav > ul {
 		border-top-left-radius: 1em;
 		border-top-right-radius: 1em;
+	}
+	/* responsive maken artikelen 3-koloms-grid*/
+	section div:nth-of-type(2) {
+		display: grid;
+		grid-template-columns: 25% 25% 25%;
+		grid-gap: 4em;
+		margin: 0 5em;
+	}
+
+	section:nth-of-type(2) {
+		height: 82.5em;
+	}
+
+	section:nth-of-type(3) div {
+		display: grid;
+		grid-template-columns: 25% 25% 25%;
+		grid-gap: 4em;
+		margin: 0 5em;
+	}
+}
+
+@media(min-width: 80em) {
+	/* responsive maken artikelen 4-koloms-grid*/
+	section div:nth-of-type(2) {
+		grid-template-columns: 20% 20% 20% 20%;
+		margin: 0;
+	}
+
+	section:nth-of-type(2) {
+		height: 59em;
+	}
+
+	section:nth-of-type(3) div {
+		display: flex;
+		margin: 0;
 	}
 }
