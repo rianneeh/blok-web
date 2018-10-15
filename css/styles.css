@@ -183,8 +183,10 @@ label {
 }
 
 input[type=text],
+input[type=email],
+input[type=password],
 select {
-	border: 0.5px solid #969696;
+	border: 1px solid #969696;
 	border-radius: 0.5em;
 	color: #969696;
 	font-family: "Nexa Regular", helvetica, sans-serif;
@@ -203,7 +205,7 @@ select {
 
 input:hover,
 select:hover {
-	border: 0.5px solid #2800a0;
+	border: 1px solid #2800a0;
 	color: #e6e6e6;
 }
 
@@ -215,10 +217,19 @@ input:focus,
 select:focus {
 	border: 0.5px solid #2800a0;
 	color: #969696;
+	background-color: #e6e6e6;
 }
 
 input:hover::placeholder {
 	color: #e6e6e6;
+}
+
+input:invalid {
+	border: 2px solid #ff3268;
+}
+
+input:focus:valid {
+	border: 2px solid #4de298;
 }
 
 form p {
@@ -460,6 +471,74 @@ footer > img {
 	width: 10em;
 }
 
+/* verhaalpagina */
+
+body#verhaal {
+	background-image: none;
+	background-color: #f3e5d8;
+}
+
+section#verhaalinfo {
+	display: flex;
+	flex-direction: column;
+	margin: 1.5em;
+}
+
+section#verhaalinfo a {
+	color: #606060;
+
+}
+
+section#verhaalinfo a:before {
+	content: "<";
+	font-size: 1.5em;
+	padding-right: 0.3em;
+}
+
+section#verhaalinfo h1 {
+	text-align: left;
+	color: #ff3268;
+	font-size: 3em;
+	margin: 0.8em 0.2em 0.5em;
+}
+
+section#verhaalinfo p {
+	font-family: "Nexa Bold", helvetica, sans-serif;
+	margin: 0 0.7em;
+}
+
+section#verhaalinfo p:after {
+	content: url(../images/ster-blauw.png) url(../images/ster-blauw.png) url(../images/ster-blauw.png);
+	margin-left: 0.5em;
+}
+
+section#verhaalinfo button {
+	background-color: #00d66c;
+	border-radius: 2em;
+	border: none;
+	box-shadow: 0 0.1875em 0.0625em #1e9162;
+	color: white;
+	font-size: 1.2em;
+	width: 8em;
+	padding: 0.2em 0.4em;
+	margin: 1.5em auto;
+}
+
+section#verhaalinfo button:before {
+	content: "♥";
+	margin-right: 0.5em;
+}
+
+section#verhaalinfo button:hover {
+	background-color: #4de298;
+}
+
+section#verhaalinfo button:active {
+	box-shadow: 0 -0.1875em 0.0625em #1e9162;
+	color: #4de298;
+	background-color: white;
+}
+
 @media(min-width: 30em) {
 	body {
 		background-size: 250%;
@@ -524,7 +603,22 @@ footer > img {
 	/* de twee formulieren op het loginscherm komen naast elkaar*/
 	header + div {
 		display: flex;
-		margin: 6em 0;
+		margin: 3em 0;
+	}
+
+	/* verhaalpagina: waardering komt naast h1 */
+	body#verhaal {
+		position: relative;
+	}
+
+	body#verhaal button {
+		position: absolute;
+		right: 3em;
+		top: 13.3em;
+	}
+
+	body#verhaal h1 {
+		font-size: 3.5em;
 	}
 }
 
@@ -616,9 +710,29 @@ footer > img {
 		grid-gap: 4em;
 		margin: 0 5em;
 	}
+
+	body#verhaal {
+		position: relative;
+	}
+
+	body#verhaal p {
+		position: absolute;
+		right: 11em;
+		top: 12em;
+	}
+
+	body#verhaal button {
+		position: absolute;
+		right: 10em;
+		top: 12em;
+	}
+
+	body#verhaal h1 {
+		font-size: 3.8em;
+	}
 }
 
-@media(min-width: 80em) {
+@media(min-width: 78em) {
 	/* responsive maken artikelen 4-koloms-grid*/
 	section div:nth-of-type(2) {
 		grid-template-columns: 20% 20% 20% 20%;
@@ -630,7 +744,7 @@ footer > img {
 	}
 
 	section:nth-of-type(3) div {
-		display: flex;
+		grid-template-columns: 20% 20% 20% 20%;
 		margin: 0;
 	}
 }
