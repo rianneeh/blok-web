@@ -551,6 +551,7 @@ footer > img {
 
 	body {
 		background-size: 160%;
+		background-position: -32em 4.5em;
 	}
 
 	/*De h1 komt naast het formulier*/
@@ -575,5 +576,21 @@ footer > img {
 @media(min-width: 70em) {
 	h1 {
 		font-size: 3em;
+	}
+
+	header {
+		position: relative;
+	}
+
+	header nav {
+		position: absolute;
+		width: 45%;
+		top: 46%;
+		left: 22%;
+	}
+
+	header nav > ul {
+		border-top-left-radius: 1em;
+		border-top-right-radius: 1em;
 	}
 }
