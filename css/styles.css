@@ -1,10 +1,23 @@
+/* generic styles*/
+
+@font-face {
+	font-family: "Nexa Regular";
+	src: url("../fonts/NexaRegular.ttf")
+}
+
+@font-face {
+	font-family: "Nexa Bold";
+	src: url("../fonts/NexaBold.ttf")
+}
+
 body {
 	background-image: url("../images/achtergrond.jpg");
-	background-position: 0 6em;
+	background-position: -32em 6em;
 	background-repeat: no-repeat;
-	background-size: 90em;
-	font-family: nexabold, sans-serif;
+	background-size: 350%;
+	font-family: "Nexa Bold", helvetica, sans-serif;
 	margin: 0;
+	transition: all 1s;
 }
 
 h1 {
@@ -29,7 +42,7 @@ h3 {
 
 p {
 	color: #202020;
-	font-family: nexaregular;
+	font-family: "Nexa Regular", helvetica, sans-serif;
 }
 
 a {
@@ -38,7 +51,7 @@ a {
 }
 
 button {
-	font-family: nexabold;
+	font-family: "Nexa Bold", helvetica, sans-serif;
 	transition: all .25s;
 }
 
@@ -65,7 +78,7 @@ ul {
 
 /* bovenste deel van de header(groen)*/
 
-header section {
+header div {
 	background-color: #00d66c;
 	display: flex;
 }
@@ -76,8 +89,8 @@ header img {
 }
 
 header img:first-child {
-	height: 100%;
-	width: 10em;
+	height: 50%;
+	width: 12em;
 }
 
 header img:nth-of-type(1) {
@@ -86,7 +99,7 @@ header img:nth-of-type(1) {
 
 /* titels 'Mijn verhalen' en 'Profiel' alleen weergeven bij breeder display*/
 
-header section h2 {
+header div h2 {
 	display: none;
 }
 
@@ -102,7 +115,8 @@ nav > ul {
 	padding: 0.8em 0;
 }
 
-nav a:hover {
+nav a:hover,
+nav a:active {
 	color: #2800a0;
 }
 
@@ -118,20 +132,21 @@ nav ul li:hover > ul {
 nav ul ul {
 	border-radius: .8em;
 	display: none;
-	font-family: nexaregular;
+	font-family: "Nexa Regular", helvetica, sans-serif;
 	line-height: 200%;
-	margin-left: -1em;
+	margin-left: -2em;
 	margin-top: 1em;
 	padding: 0 1em;
 	position: absolute;
 	top: 0;
+	width: 5.5em;
 }
 
 nav ul ul:hover {
 	opacity: 1;
 }
 
-/* formulier */
+/* formulier jaagaeafhg */
 
 form {
 	background-color: rgba(255, 255, 255, 0.9);
@@ -162,33 +177,48 @@ label {
 	padding: 0 0 0.3em;
 }
 
-input[type=text] {
+input[type=text],
+select {
 	border: 0.5px solid #969696;
 	border-radius: 0.5em;
 	color: #969696;
-	font-family: nexaregular, sans-serif;
+	font-family: "Nexa Regular", helvetica, sans-serif;
 	font-size: 1rem;
 	margin-bottom: 1em;
 	padding: 0.5em;
 	width: 95%;
-}
-
-input[type=text]:hover {
-	color: #e6e6e6;
+	transition: all .5s;
 }
 
 select {
-	border: 0.5px solid #969696;
-	color: #969696;
-	font-family: nexaregular, sans-serif;
-	font-size: 1em;
-	margin-bottom: 1em;
 	width: 45%;
+	height: 2.2em;
+}
+
+
+input:hover,
+select:hover {
+	border: 0.5px solid #2800a0;
+	color: #e6e6e6;
+}
+
+input:hover::placeholder {
+	color: #e6e6e6;
+}
+
+input:focus,
+select:focus {
+	border: 0.5px solid #2800a0;
+	color: #969696;
+}
+
+input:hover::placeholder {
+	color: #e6e6e6;
 }
 
 form p {
 	color: #202020;
-	font-family: nexabold, sans-serif;
+	font-family: "Nexa Bold", helvetica, sans-serif;
 	font-size: 1em;
 	margin: 0;
 	padding: 0 0 0.3em;
@@ -196,7 +226,7 @@ form p {
 
 p label {
 	color: #606060;
-	font-family: nexaregular, sans-serif;
+	font-family: "Nexa Regular", helvetica, sans-serif;
 	margin-left: 0.4em;
 }
 
@@ -206,7 +236,7 @@ input[type=submit] {
 	border-radius: 1em;
 	box-shadow: 0 0.1875em 0.0625em #ca2b55;
 	color: white;
-	font-family: nexabold;
+	font-family: "Nexa Bold", helvetica, sans-serif;
 	font-size: 1.4em;
 	margin: 0.5em auto;
 	padding: 0.3em 1.2em;
@@ -225,7 +255,7 @@ input[type=submit]:active {
 
 section:nth-of-type(2) {
 	background-color: #f3e5d8;
-	height: 41em;
+	height: 42em;
 }
 
 section:nth-of-type(2) footer a {
@@ -247,7 +277,6 @@ section:nth-of-type(2) h3 {
 
 section:nth-of-type(3) {
 	background-color: white;
-	height: 40em;
 }
 
 section:nth-of-type(3) h2 {
@@ -264,10 +293,11 @@ section footer a {
 	box-shadow: 0 0.1875em 0.0625em #ca2b55;
 	color: white;
 	display: block;
-	font-family: nexabold;
+	font-family: "Nexa Bold", helvetica, sans-serif;
 	font-size: 1.2em;
-	margin: 0 auto;
+	margin: 2em auto;
 	padding: 0.6em 1.2em;
+	text-align: center;
 	width: 6.2em;
 }
 
@@ -304,7 +334,7 @@ section div {
 	background-color: #ffffff;
 	border: none;
 	box-shadow: none;
-	font-family: nexaregular;
+	font-family: "Nexa Regular", helvetica, sans-serif;
 	font-size: 1em;
 	padding: 0.3em .8em;
 }
@@ -320,8 +350,10 @@ section div {
 	background-color: #adadad;
 }
 
-#sorteren button:nth-of-type(1):active {
-	color: black;
+#sorteren button:nth-of-type(1):active,
+#sorteren button:nth-of-type(1):focus {
+	color: #00d66c;
+	background-color: #e6e6e6;
 }
 
 #sorteren button:nth-of-type(2) {
@@ -333,8 +365,10 @@ section div {
 	background-color: #e6e6e6;
 }
 
-#sorteren button:nth-of-type(2):active {
-	color: white;
+#sorteren button:nth-of-type(2):active,
+#sorteren button:nth-of-type(2):focus {
+	color: #00d66c;
+	background-color: #e6e6e6;
 }
 
 
@@ -408,7 +442,7 @@ body > footer {
 
 body > footer a {
 	color: white;
-	font-family: nexaregular;
+	font-family: "Nexa Regular", helvetica, sans-serif;
 	padding: 1em 0 0 1em;
 }
 
@@ -419,4 +453,121 @@ body > footer a:hover {
 footer > img {
 	margin: 1em auto;
 	width: 10em;
+}
+
+@media(min-width: 30em) {
+	body {
+		background-size: 250%;
+		background-position: -32em 5em;
+	}
+}
+
+@media(min-width: 40em) {
+	/*achtergrond aanpassen*/
+	body {
+		background-size: 220%;
+	}
+	/*Header titels verschijnen*/
+	header div a {
+		display: flex;
+		height: 4.5em;
+		margin-left: 1.5em;
+	}
+
+	header div h2 {
+		display: block;
+		color: white;
+		font-size: 1.2em;
+		margin: 0.4em -1em 0 0;
+		transition: all .5s;
+	}
+
+	header div h2:hover {
+		color: #5e40b8;
+	}
+
+	/*formulier wordt breder*/
+	body section:nth-of-type(1) form {
+		margin: 0 auto;
+		width: 60%;
+		margin-bottom: 2em;
+	}
+
+	/*Footer items gaan naast elkaar staan*/
+	body > footer {
+		flex-direction: row;
+		position: relative;
+		height: 7em;
+	}
+
+	body > footer a {
+		margin-left: 2em;
+		margin-top: 0.5em;
+	}
+
+	body > footer img {
+		position: absolute;
+		bottom: 1em;
+		right: 2em;
+	}
+}
+
+@media(min-width: 50em) {
+	body {
+		background-size: 180%;
+	}
+
+	/*Het sorteermechanisme komt naast de header bij section: ontdekken*/
+	section:nth-of-type(2) {
+		position: relative;
+	}
+
+	section:nth-of-type(2) h2 {
+		margin-bottom: 0.8em;
+	}
+
+	div#sorteren {
+		position: absolute;
+		top: 2em;
+		right: 1em;
+	}
+
+	header + div {
+		display: flex;
+		margin: 3em 0;
+	}
+}
+
+@media(min-width: 60em) {
+	h1 {
+		font-size: 2.8em;
+	}
+
+	body {
+		background-size: 160%;
+	}
+
+	/*De h1 komt naast het formulier*/
+	body section:nth-of-type(1) {
+		display: flex;
+		margin: 5em 10%;
+	}
+
+	body section:nth-of-type(1) h1 {
+		width: 9em;
+		text-align: left;
+		margin-right: 4%;
+		margin-top: -.001em;
+	}
+
+	form {
+		width: 40%;
+		max-width: 28em;
+	}
+}
+
+@media(min-width: 70em) {
+	h1 {
+		font-size: 3em;
+	}
 }
