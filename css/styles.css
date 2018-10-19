@@ -10,6 +10,10 @@
 	src: url("../fonts/NexaBold.ttf")
 }
 
+html {
+	height: 100%;
+}
+
 body {
 	background-image: url("../images/achtergrond.jpg");
 	background-position: -32em 6em;
@@ -18,6 +22,9 @@ body {
 	font-family: "Nexa Bold", helvetica, sans-serif;
 	margin: 0;
 	transition: all 1s;
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
 }
 
 h1 {
@@ -454,9 +461,12 @@ body > footer {
 	background-color: #00d66c;
 	display: flex;
 	flex-direction: column;
+	margin-top: auto;
+
 }
 
 body > footer a {
+	font-size: 0.9em;
 	color: white;
 	font-family: "Nexa Regular", helvetica, sans-serif;
 	padding: 1em 0 0 1em;
@@ -466,9 +476,10 @@ body > footer a:hover {
 	color: #2800a0;
 }
 
-footer > img {
+body > footer img {
 	margin: 1em auto;
 	width: 10em;
+
 }
 
 /* verhaalpagina */
@@ -478,10 +489,16 @@ body#verhaal {
 	background-color: #f3e5d8;
 }
 
+body#verhaal > img {
+	width: 120%;
+	margin-left: -10%;
+}
+
 section#verhaalinfo {
 	display: flex;
 	flex-direction: column;
 	margin: 1.5em;
+	margin-bottom: 5em;
 }
 
 section#verhaalinfo a {
@@ -586,7 +603,7 @@ section#verhaalinfo button:active {
 	/*Footer items gaan naast elkaar staan*/
 	body > footer {
 		flex-direction: row;
-		position: relative;
+		/position: relative;
 		height: 7em;
 	}
 
@@ -672,6 +689,27 @@ section#verhaalinfo button:active {
 	}
 }
 
+@media(min-width: 65em) {
+	/* responsive maken artikelen 3-koloms-grid*/
+	section div:nth-of-type(2) {
+		display: grid;
+		grid-template-columns: 25% 25% 25%;
+		grid-gap: 4em;
+		margin: 0 5em;
+	}
+
+	section:nth-of-type(2) {
+		height: 82.5em;
+	}
+
+	section:nth-of-type(3) div {
+		display: grid;
+		grid-template-columns: 25% 25% 25%;
+		grid-gap: 4em;
+		margin: 0 5em;
+	}
+}
+
 @media(min-width: 70em) {
 	h1 {
 		font-size: 3em;
@@ -692,26 +730,7 @@ section#verhaalinfo button:active {
 		border-top-left-radius: 1em;
 		border-top-right-radius: 1em;
 	}
-	/* responsive maken artikelen 3-koloms-grid*/
-	section div:nth-of-type(2) {
-		display: grid;
-		grid-template-columns: 25% 25% 25%;
-		grid-gap: 4em;
-		margin: 0 5em;
-	}
-
-	section:nth-of-type(2) {
-		height: 82.5em;
-	}
-
-	section:nth-of-type(3) div {
-		display: grid;
-		grid-template-columns: 25% 25% 25%;
-		grid-gap: 4em;
-		margin: 0 5em;
-	}
-
-	body#verhaal {
+	* body#verhaal {
 		position: relative;
 	}
 
