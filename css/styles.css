@@ -16,9 +16,7 @@ html {
 
 body {
 	background-image: url("../images/achtergrond.jpg");
-	background-position: -32em 6em;
 	background-repeat: no-repeat;
-	background-size: 380%;
 	font-family: "Nexa Bold", helvetica, sans-serif;
 	margin: 0;
 	transition: all 1s;
@@ -29,20 +27,20 @@ body {
 
 h1 {
 	color: white;
-	font-size: 2.375rem;
+	font-size: 2.8em;
 	text-align: center;
 }
 
 h2 {
 	color: #00d66c;
-	font-size: 2.375rem;
+	font-size: 3.5em;
 	margin: 0;
-	padding: 1.2em 0.7em 0.6em;
+	padding: 0.8em 0.5em 0.6em;
 }
 
 h3 {
 	color: #ff3268;
-	font-size: 1.35em;
+	font-size: 1.4em;
 	margin: .55em 0 .5em;
 	padding-left: 0.5em;
 }
@@ -50,6 +48,8 @@ h3 {
 p {
 	color: #202020;
 	font-family: "Nexa Regular", helvetica, sans-serif;
+	font-size: 1.3em;
+	line-height: 1.5em;
 }
 
 a {
@@ -69,7 +69,13 @@ article {
 	height: 19em;
 	margin: 0 1.5em;
 	position: relative;
-	width: 17em;
+	width: 19em;
+}
+
+article > img {
+	border-top-left-radius: 1em;
+	border-top-right-radius: 1em;
+	height: 11.5em;
 }
 
 img {
@@ -78,7 +84,7 @@ img {
 }
 
 ul {
-	background-color: white;
+	background-color: #00d66c;
 	list-style: none;
 	margin: 0;
 }
@@ -86,21 +92,22 @@ ul {
 /* bovenste deel van de header(groen)*/
 
 header div {
-	background-color: #00d66c;
+	background-color: white;
 	display: flex;
 }
 
 header img {
-	padding: 1.3em 1em 1em 1em;
-	width: 2.3em;
+	padding: 0.8em 1em 0.7em 1em;
+	width: 3.5em;
+	height: 3em;
 }
 
 header img:first-child {
-	height: 50%;
-	width: 12em;
+	height: 60%;
+	width: 15em;
 }
 
-header img:nth-of-type(1) {
+header a:nth-of-type(1) {
 	margin-right: auto;
 }
 
@@ -113,7 +120,8 @@ header div h2 {
 /* onderste deel van de header(wit)*/
 
 nav a {
-	color: #00d66c;
+	color: white;
+	font-size: 1.5em;
 }
 
 nav > ul {
@@ -136,20 +144,15 @@ nav ul li:hover > ul {
 }
 
 nav ul ul {
-	border-radius: .8em;
 	display: none;
 	font-family: "Nexa Regular", helvetica, sans-serif;
 	line-height: 200%;
-	margin-left: -2em;
-	margin-top: 1em;
+	margin-left: -3em;
+	margin-top: 2.2em;
 	padding: 0 1em;
 	position: absolute;
 	top: 0;
-	width: 5.5em;
-}
-
-nav ul ul:hover {
-	opacity: 1;
+	width: 9.8em;
 }
 
 /* formulier */
@@ -158,8 +161,10 @@ form {
 	background-color: rgba(255, 255, 255, 0.9);
 	border-radius: 1em;
 	margin: 0 auto 2.7em;
-	width: 20em;
+	width: 28em;
 }
+
+/*formulieren loginpagina ruimte geven*/
 
 form[action=get]:nth-of-type(1) {
 	margin-top: 2em;
@@ -175,18 +180,17 @@ fieldset div {
 
 }
 
-
 legend {
 	color: #ff3268;
-	font-size: 1.5em;
+	font-size: 2.8em;
 	padding: 0.7em 0 0.5em;
 	text-align: center;
 }
 
 label {
 	color: #202020;
-	font-size: 0.95em;
-	padding: 0 0 0.3em;
+	font-size: 1.3em;
+	padding: 0 0 0.8em;
 }
 
 input[type=text],
@@ -197,15 +201,15 @@ select {
 	border-radius: 0.5em;
 	color: #969696;
 	font-family: "Nexa Regular", helvetica, sans-serif;
-	font-size: 1rem;
-	margin-bottom: 1em;
+	font-size: 1.4rem;
+	margin-bottom: 1.5em;
 	padding: 0.5em;
-	width: 95%;
+	width: 94%;
 	transition: all .5s;
 }
 
 select {
-	width: 45%;
+	width: 50%;
 	height: 2.2em;
 }
 
@@ -242,27 +246,28 @@ input:focus:valid {
 form p {
 	color: #202020;
 	font-family: "Nexa Bold", helvetica, sans-serif;
-	font-size: 1em;
+	font-size: 1.4em;
 	margin: 0;
-	padding: 0 0 0.3em;
+	padding: 0 0 0.5em;
 }
 
 p label {
 	color: #606060;
 	font-family: "Nexa Regular", helvetica, sans-serif;
+	font-size: 1.1em;
 	margin-left: 0.4em;
 }
 
 input[type=submit] {
 	background-color: #ff3268;
 	border: none;
-	border-radius: 1em;
+	border-radius: 3em;
 	box-shadow: 0 0.1875em 0.0625em #ca2b55;
 	color: white;
 	font-family: "Nexa Bold", helvetica, sans-serif;
 	font-size: 1.4em;
-	margin: 0.5em auto;
-	padding: 0.3em 1.2em;
+	margin: 0.5em auto 1.2em;
+	padding: 0.6em 2.2em;
 	transition: all .5s;
 }
 
@@ -274,11 +279,15 @@ input[type=submit]:active {
 	box-shadow: 0 -0.1875em 0.0625em #ca2b55;
 }
 
+input[type=submit]:valid {
+	border: 1px solid #ca2b55;
+}
+
 /*sections*/
 
 section:nth-of-type(2) {
 	background-color: #f3e5d8;
-	height: 42em;
+	height: 47em;
 }
 
 section:nth-of-type(2) footer a {
@@ -300,6 +309,7 @@ section:nth-of-type(2) h3 {
 
 section:nth-of-type(3) {
 	background-color: white;
+	height: 49em;
 }
 
 section:nth-of-type(3) h2 {
@@ -317,9 +327,9 @@ section footer a {
 	color: white;
 	display: block;
 	font-family: "Nexa Bold", helvetica, sans-serif;
-	font-size: 1.2em;
+	font-size: 1.4em;
 	margin: 2em auto;
-	padding: 0.6em 1.2em;
+	padding: 0.6em 1.6em;
 	text-align: center;
 	width: 6.2em;
 }
@@ -339,7 +349,7 @@ section div {
 	overflow-x: scroll;
 }
 
-/* articles: ontdekken sorteer filter*/
+/* articles van: Ontdekken > sorteer filter*/
 
 #sorteren {
 	display: flex;
@@ -358,14 +368,14 @@ section div {
 	border: none;
 	box-shadow: none;
 	font-family: "Nexa Regular", helvetica, sans-serif;
-	font-size: 1em;
-	padding: 0.3em .8em;
+	font-size: 1.2em;
+	padding: 0.4em 1.2em;
 }
 
 #sorteren button:nth-of-type(1) {
 	background-color: #969696;
-	border-bottom-left-radius: 1em;
-	border-top-left-radius: 1em;
+	border-bottom-left-radius: 1.5em;
+	border-top-left-radius: 1.5em;
 	color: white;
 }
 
@@ -380,8 +390,8 @@ section div {
 }
 
 #sorteren button:nth-of-type(2) {
-	border-bottom-right-radius: 1em;
-	border-top-right-radius: 1em;
+	border-bottom-right-radius: 1.5em;
+	border-top-right-radius: 1.5em;
 }
 
 #sorteren button:nth-of-type(2):hover {
@@ -395,24 +405,18 @@ section div {
 }
 
 
-/* articles: bundels*/
+/* articles van: Bundels*/
 
 section:nth-of-type(3) article {
 	background-color: #f5f8fa;
-	height: 24em;
-}
-
-article > img {
-	border-top-left-radius: 1em;
-	border-top-right-radius: 1em;
-	height: 11.5em;
+	height: 29em;
 }
 
 article p {
 	padding: 0 0.6em;
 }
 
-/* knoppen articles*/
+/* knoppen van articles*/
 
 article a,
 article button {
@@ -424,6 +428,7 @@ article button {
 }
 
 article a {
+	font-size: 1.2em;
 	border-radius: 2em;
 	bottom: 1em;
 	left: .8em;
@@ -434,8 +439,8 @@ article a {
 article button {
 	border-radius: 2rem;
 	bottom: 1em;
-	font-size: 0.9em;
-	padding: 0.5em 1.2em;
+	font-size: 1.1em;
+	padding: 0.55em 1em;
 	right: 1em;
 }
 
@@ -447,7 +452,7 @@ article button:hover {
 article a:active,
 article button:active {
 	box-shadow: 0 -0.1875em 0.0625em #120145;
-	color: #ff3268;
+	background-color: #ff3268;
 }
 
 article button img {
@@ -458,7 +463,7 @@ article button img {
 /*footer*/
 
 body > footer {
-	background-color: #00d66c;
+	background-color: #f5f8fa;
 	display: flex;
 	flex-direction: column;
 	margin-top: auto;
@@ -466,8 +471,8 @@ body > footer {
 }
 
 body > footer a {
-	font-size: 0.9em;
-	color: white;
+	font-size: 1.2em;
+	color: #969696;
 	font-family: "Nexa Regular", helvetica, sans-serif;
 	padding: 1em 0 0 1em;
 }
@@ -478,7 +483,7 @@ body > footer a:hover {
 
 body > footer img {
 	margin: 1em auto;
-	width: 10em;
+	width: 12em;
 
 }
 
@@ -498,30 +503,34 @@ section#verhaalinfo {
 	display: flex;
 	flex-direction: column;
 	margin: 1.5em;
-	margin-bottom: 5em;
+	margin-bottom: 2em;
 }
 
 section#verhaalinfo a {
 	color: #606060;
+	font-size: 1.2em;
+}
 
+section#verhaalinfo a:hover {
+	color: #2800a0;
 }
 
 section#verhaalinfo a:before {
 	content: "<";
-	font-size: 1.5em;
+	font-size: 1.6em;
 	padding-right: 0.3em;
 }
 
 section#verhaalinfo h1 {
 	text-align: left;
 	color: #ff3268;
-	font-size: 3em;
 	margin: 0.8em 0.2em 0.5em;
 }
 
 section#verhaalinfo p {
 	font-family: "Nexa Bold", helvetica, sans-serif;
-	margin: 0 0.7em;
+	font-size: 1.4em;
+	margin: 0 0.4em;
 }
 
 section#verhaalinfo p:after {
@@ -530,14 +539,13 @@ section#verhaalinfo p:after {
 }
 
 section#verhaalinfo button {
-	background-color: #00d66c;
+	background-color: #969696;
+	box-shadow: 0 0.1875em 0.0625em #606060;
 	border-radius: 2em;
 	border: none;
-	box-shadow: 0 0.1875em 0.0625em #1e9162;
 	color: white;
-	font-size: 1.2em;
-	width: 8em;
-	padding: 0.2em 0.4em;
+	font-size: 1.3em;
+	padding: 0.45em 1.6em;
 	margin: 1.5em auto;
 }
 
@@ -547,80 +555,25 @@ section#verhaalinfo button:before {
 }
 
 section#verhaalinfo button:hover {
-	background-color: #4de298;
+	background-color: #cccccc;
 }
 
 section#verhaalinfo button:active {
-	box-shadow: 0 -0.1875em 0.0625em #1e9162;
-	color: #4de298;
-	background-color: white;
+	box-shadow: 0 -0.1875em 0.0625em #120145;
+	background-color: #ff3268;
 }
 
 @media(min-width: 30em) {
 	body {
-		background-size: 250%;
-		background-position: -32em 5em;
-	}
-}
-
-@media(min-width: 32.1em) {
-	section:nth-of-type(2) {
-		height: 39.5em;
+		background-size: 420%;
+		background-position: -40em 6em;
 	}
 }
 
 @media(min-width: 40em) {
 	/*achtergrond aanpassen*/
 	body {
-		background-size: 220%;
-	}
-	/*Header titels verschijnen*/
-	header div a {
-		display: flex;
-		height: 4.5em;
-		margin-left: 1.5em;
-	}
-
-	header div h2 {
-		display: block;
-		color: white;
-		font-size: 1.2em;
-		margin: 0.4em -1em 0 0;
-		transition: all .5s;
-	}
-
-	header div h2:hover {
-		color: #5e40b8;
-	}
-
-	/*formulier wordt breder*/
-	body section:nth-of-type(1) form {
-		margin: 0 auto;
-		width: 60%;
-		margin-bottom: 2em;
-	}
-
-	/*Footer items gaan naast elkaar staan*/
-	body > footer {
-		flex-direction: row;
-		/position: relative;
-		height: 7em;
-	}
-
-	body > footer a {
-		margin-left: 2em;
-		margin-top: 0.5em;
-	}
-
-	body > footer img {
-		position: absolute;
-		bottom: 1em;
-		right: 2em;
-	}
-	/* de twee formulieren op het loginscherm komen naast elkaar*/
-	header + div {
-		display: flex;
-		margin: 3em 0;
+		background-size: 350%;
 	}
 
 	/* verhaalpagina: waardering komt naast h1 */
@@ -631,19 +584,111 @@ section#verhaalinfo button:active {
 	body#verhaal button {
 		position: absolute;
 		right: 3em;
-		top: 13.3em;
+		top: 12.8em;
 	}
 
 	body#verhaal h1 {
 		font-size: 3.5em;
+		padding-bottom: 1em;
+	}
+
+	body#verhaal p {
+		position: absolute;
+		right: 18em;
+		top: 14em;
 	}
 }
 
 @media(min-width: 50em) {
-	body {
-		background-size: 180%;
+	h1 {
+		font-size: 4em;
 	}
 
+	body {
+		background-size: 270%;
+	}
+
+	/*Header titels verschijnen*/
+	header div a {
+		display: flex;
+		height: 4.5em;
+		margin-left: 1.5em;
+	}
+
+	header div h2 {
+		display: block;
+		color: #00d66c;
+		font-size: 1.6em;
+		margin: 0.2em -0.6em 0;
+		transition: all .5s;
+	}
+
+	header div h2:hover {
+		color: #5e40b8;
+	}
+
+	/*Footer items gaan naast elkaar staan*/
+	body > footer {
+		flex-direction: row;
+		position: relative;
+		height: 7em;
+	}
+
+	body > footer a {
+		margin-left: 2em;
+		margin-top: 0.5em;
+	}
+
+	body > footer > img {
+		position: absolute;
+		bottom: 1em;
+		right: 2em;
+	}
+}
+
+@media(min-width: 60em) {
+	body {
+		background-size: 230%;
+	}
+}
+
+@media(min-width: 65em) {
+
+	body {
+		background-size: 200%;
+	}
+
+	/*De h1 komt naast het formulier*/
+	body section:nth-of-type(1) {
+		display: flex;
+		margin: 5em 10%;
+	}
+
+	body section:nth-of-type(1) h1 {
+		width: 40%;
+		text-align: left;
+		margin-right: 4%;
+		margin-top: -0.001em;
+	}
+
+	/* formulier groeit mee met schermbreedte*/
+	form {
+		width: 50%;
+		max-width: 35em;
+	}
+
+	/* Login-pagina: de twee formulieren op het loginscherm komen naast elkaar*/
+	header + div {
+		display: flex;
+		margin: 3em 5%;
+	}
+
+	header + div form {
+		width: 45%;
+	}
+}
+
+@media(min-width: 70em) {
 	/*Het sorteermechanisme komt naast de header bij section: ontdekken*/
 	section:nth-of-type(2) {
 		position: relative;
@@ -658,63 +703,64 @@ section#verhaalinfo button:active {
 		top: 2em;
 		right: 1em;
 	}
-}
 
-@media(min-width: 60em) {
-	h1 {
-		font-size: 2.8em;
-	}
-
-	body {
-		background-size: 160%;
-		background-position: -32em 4.5em;
-	}
-
-	/*De h1 komt naast het formulier*/
-	body section:nth-of-type(1) {
-		display: flex;
-		margin: 5em 10%;
-	}
-
-	body section:nth-of-type(1) h1 {
-		width: 9em;
-		text-align: left;
-		margin-right: 4%;
-		margin-top: -.001em;
-	}
-	/* formulier groeit mee met schermbreedte*/
-	form {
-		width: 40%;
-		max-width: 28em;
-	}
-}
-
-@media(min-width: 65em) {
 	/* responsive maken artikelen 3-koloms-grid*/
 	section div:nth-of-type(2) {
 		display: grid;
 		grid-template-columns: 25% 25% 25%;
-		grid-gap: 4em;
-		margin: 0 5em;
+		grid-gap: 5em;
+		margin: 0 7%;
 	}
 
 	section:nth-of-type(2) {
-		height: 82.5em;
+		height: 89em;
 	}
 
 	section:nth-of-type(3) div {
 		display: grid;
 		grid-template-columns: 25% 25% 25%;
-		grid-gap: 4em;
-		margin: 0 5em;
+		grid-gap: 5em;
+		margin: 0 7%;
+	}
+
+	section:nth-of-type(3) {
+		height: 81em;
+	}
+
+	body#verhaal {
+		position: relative;
+	}
+
+	body#verhaal button {
+		position: absolute;
+		right: 10em;
+		top: 10em;
+	}
+
+	body#verhaal p {
+		position: absolute;
+		right: 21em;
+		top: 11em;
+	}
+
+	body#verhaal h1 {
+		font-size: 3.5em;
+		padding-bottom: 0.5em;
 	}
 }
 
-@media(min-width: 70em) {
-	h1 {
-		font-size: 3em;
+@media(min-width: 78em) {
+	body {
+		background-size: 160%;
 	}
-	/* witte deel header komt in het groene deel*/
+}
+
+@media(min-width: 84em) {
+	body {
+		background-size: 130%;
+		background-position: 0 4em;
+	}
+	/* groene deel header komt in het witte deel*/
 	header {
 		position: relative;
 	}
@@ -722,7 +768,7 @@ section#verhaalinfo button:active {
 	header nav {
 		position: absolute;
 		width: 45%;
-		top: 46%;
+		top: 30%;
 		left: 22%;
 	}
 
@@ -730,40 +776,44 @@ section#verhaalinfo button:active {
 		border-top-left-radius: 1em;
 		border-top-right-radius: 1em;
 	}
-	* body#verhaal {
-		position: relative;
+
+	/*h1 homepage wordt groter*/
+	body section:nth-of-type(1) h1 {
+		font-size: 5em;
 	}
 
-	body#verhaal p {
-		position: absolute;
-		right: 11em;
-		top: 12em;
-	}
-
-	body#verhaal button {
-		position: absolute;
-		right: 10em;
-		top: 12em;
-	}
-
-	body#verhaal h1 {
-		font-size: 3.8em;
-	}
-}
-
-@media(min-width: 78em) {
 	/* responsive maken artikelen 4-koloms-grid*/
 	section div:nth-of-type(2) {
-		grid-template-columns: 20% 20% 20% 20%;
-		margin: 0;
+		grid-template-columns: 19% 19% 19% 19%;
+		grid-gap: 5em;
 	}
 
 	section:nth-of-type(2) {
-		height: 59em;
+		height: 65em;
+	}
+
+	section:nth-of-type(3) {
+		height: 48.5em;
 	}
 
 	section:nth-of-type(3) div {
-		grid-template-columns: 20% 20% 20% 20%;
+		grid-template-columns: 19% 19% 19% 19%;
+		grid-gap: 5em;
 		margin: 0;
+	}
+
+	section div:nth-of-type(2) {
+		max-width: 90em;
+		margin: 0 auto;
+	}
+
+	#grid {
+		max-width: 90em;
+		margin: 0 auto;
+	}
+
+	body#verhaal h1 {
+		font-size: 5em;
+		padding-bottom: 0;
 	}
 }
