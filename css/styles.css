@@ -98,8 +98,8 @@ header div {
 
 header img {
 	padding: 0.8em 1em 0.4em 1em;
-	width: 2.2em;
-	height: 2em;
+	width: 2em;
+	height: 1.9em;
 }
 
 header img:first-child {
@@ -161,7 +161,7 @@ form {
 	background-color: rgba(255, 255, 255, 0.9);
 	border-radius: 1em;
 	margin: 0 auto 2.7em;
-	width: 18em;
+	width: 20em;
 }
 
 /*formulieren loginpagina ruimte geven*/
@@ -189,8 +189,8 @@ legend {
 
 label {
 	color: #202020;
-	font-size: 1.3em;
-	padding: 0 0 0.8em;
+	font-size: 1.1em;
+	padding: 0 0 0.5em;
 }
 
 input[type=text],
@@ -198,19 +198,19 @@ input[type=email],
 input[type=password],
 select {
 	border: 1px solid #969696;
-	border-radius: 0.5em;
+	border-radius: 0.3em;
 	color: #969696;
 	font-family: "Nexa Regular", helvetica, sans-serif;
-	font-size: 1.1rem;
+	font-size: 1.1em;
 	margin-bottom: 1.1em;
-	padding: 0.3em;
+	padding: 0.4em;
 	width: 94%;
 	transition: all .5s;
 }
 
 select {
 	width: 50%;
-	height: 2.2em;
+	height: 2em;
 }
 
 
@@ -246,15 +246,15 @@ input:focus:valid {
 form p {
 	color: #202020;
 	font-family: "Nexa Bold", helvetica, sans-serif;
-	font-size: 1.4em;
+	font-size: 1, 2em;
 	margin: 0;
-	padding: 0 0 0.5em;
+	padding: 0 0 0.1em;
 }
 
 p label {
 	color: #606060;
 	font-family: "Nexa Regular", helvetica, sans-serif;
-	font-size: 1.1em;
+	font-size: 1em;
 	margin-left: 0.4em;
 }
 
@@ -266,8 +266,8 @@ input[type=submit] {
 	color: white;
 	font-family: "Nexa Bold", helvetica, sans-serif;
 	font-size: 1.4em;
-	margin: 0.5em auto 1.2em;
-	padding: 0.6em 2.2em;
+	margin: 0.1em auto 0.5em;
+	padding: 0.3em 1.6em;
 	transition: all .5s;
 }
 
@@ -370,7 +370,7 @@ section div {
 	box-shadow: none;
 	font-family: "Nexa Regular", helvetica, sans-serif;
 	font-size: 1em;
-	padding: 0.3em 1em;
+	padding: 0.2em 0.5em;
 }
 
 #sorteren button:nth-of-type(1) {
@@ -410,7 +410,7 @@ section div {
 
 section:nth-of-type(3) article {
 	background-color: #f5f8fa;
-	height: 29em;
+	height: 31em;
 }
 
 article p {
@@ -429,19 +429,19 @@ article button {
 }
 
 article a {
-	font-size: 1.2em;
+	font-size: 1.1em;
 	border-radius: 2em;
 	bottom: 1em;
 	left: .8em;
-	padding: 0.45em 1.8em;
+	padding: 0.45em 1.6em;
 }
 
 
 article button {
 	border-radius: 2rem;
-	bottom: 1em;
-	font-size: 1.1em;
-	padding: 0.55em 1em;
+	bottom: 0.9em;
+	font-size: 1em;
+	padding: 0.55em 0.8em;
 	right: 1em;
 }
 
@@ -570,23 +570,10 @@ section#verhaalinfo button:active {
 		background-position: -40em 6em;
 	}
 
-	article {
-		width: 19em;
-	}
-
 	form {
 		width: 75%;
 		max-width: 30em;
 	}
-
-	input[type=text],
-	input[type=email],
-	input[type=password],
-	select {
-		font-size: 1.4rem;
-		margin-bottom: 0.5em;
-	}
-
 	#sorteren p {
 		font-size: 1.3em;
 	}
@@ -647,7 +634,7 @@ section#verhaalinfo button:active {
 
 		body {
 			background-size: 270%;
-			background-position: 0 4em;
+			background-position: 0 2em;
 		}
 		/*Footer items gaan naast elkaar staan*/
 		body > footer {
@@ -683,7 +670,7 @@ section#verhaalinfo button:active {
 		/*De h1 komt naast het formulier*/
 		body section:nth-of-type(1) {
 			display: flex;
-			margin: 5em 10%;
+			margin: 3em 10%;
 		}
 
 		body section:nth-of-type(1) h1 {
@@ -794,20 +781,10 @@ section#verhaalinfo button:active {
 		}
 	}
 
-	@media(min-width: 84em) {
-		body {
-			background-size: 130%;
-			background-position: 0 4em;
-		}
-
-		/*h1 homepage wordt groter*/
-		body section:nth-of-type(1) h1 {
-			font-size: 4em;
-		}
-
+	@media(min-width: 78em) {
 		/* responsive maken artikelen 4-koloms-grid*/
 		section div:nth-of-type(2) {
-			grid-template-columns: 19% 19% 19% 19%;
+			grid-template-columns: 18.5% 18.5% 18.5% 18.5%;
 			grid-gap: 5em;
 		}
 
@@ -821,7 +798,7 @@ section#verhaalinfo button:active {
 
 		section:nth-of-type(3) div {
 			grid-template-columns: 19% 19% 19% 19%;
-			grid-gap: 5em;
+			grid-gap: 4em;
 			margin: 0;
 		}
 
@@ -838,5 +815,17 @@ section#verhaalinfo button:active {
 		body#verhaal h1 {
 			font-size: 5em;
 			padding-bottom: 0;
+		}
+	}
+
+	@media(min-width: 84em) {
+		body {
+			background-size: 130%;
+			background-position: 0 4em;
+		}
+
+		/*h1 homepage wordt groter*/
+		body section:nth-of-type(1) h1 {
+			font-size: 4em;
 		}
 	}
