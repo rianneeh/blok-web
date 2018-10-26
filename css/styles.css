@@ -269,6 +269,7 @@ input[type=submit] {
 	margin: 0.1em auto 0.5em;
 	padding: 0.3em 1.6em;
 	transition: all .5s;
+	display: block;
 }
 
 input[type=submit]:hover {
@@ -631,7 +632,7 @@ section#verhaalinfo button:active {
 			background-color: none;
 			background-image: url(../images/verhaalIpad.png);
 			background-size: 140%;
-			background-position: -9em -3em;
+			background-position: -10em -3em;
 			width: 100%;
 			height: 400em;
 		}
