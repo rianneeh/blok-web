@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="nl">
-
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="initial-scale=1">
-	<title>Inloggen | 99 verhalen voor op reis</title>
+	<title>Resultaten (15) | 99 verhalen voor op reis</title>
 	<link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body>
+<body class="no-background">
 	<header>
 		<div id="header-top">
 			<a href="index.html"><img src="images/transavia.png" alt="Transavia logo"></a>
@@ -23,12 +22,12 @@
 		</div>
 		<nav>
 			<ul>
-				<li><a href="">Verhalen
-				</a></li>
+				<li><a href="">Verhalen</a>
+				</li>
 				<li><a href="">Bundels</a></li>
 				<li><a href="">Sferen</a>
 					<ul>
-						<li><a href="">Non-fictie</a></li>
+						<li><a href="">Nonfictie</a></li>
 						<li><a href="">Fictie</a></li>
 						<li><a href="">Positief</a></li>
 						<li><a href="">Negatief</a></li>
@@ -53,31 +52,36 @@
 			</ul>
 		</nav>
 	</header>
-	<div>
-		<form action="get">
-			<fieldset>
-				<legend>Inloggen</legend>
-				<p>Vul je e-mailadres en wachtwoord in om in te loggen. Je kunt direct inloggen met een Transavia account!</p>
-				<label for="input-email">E-mailadres</label>
-				<input type="email" id="input-email" placeholder="gebruiker@domein.nl">
-				<label for="input-password">Wachtwoord</label>
-				<input type="password" id="input-password">
-				<input type="submit" value="Inloggen">
-			</fieldset>
-		</form>
-		<form action="get">
-			<fieldset>
-				<legend>Een account aanmaken</legend>
-				<p>Vul je gegevens in om een account aan te maken.</p>
-				<label for="input-naam">Naam</label>
-				<input type="text" id="input-naam" placeholder="b.v. Elisa Boer">
-				<label for="input-e-mail">E-mailadres</label>
-				<input type="email" id="input-e-mail" placeholder="gebruiker@domein.nl">
-				<label for="input-pw">Wachtwoord</label>
-				<input type="password" id="input-pw">
-				<input type="submit" value="Account aanmaken">
-			</fieldset>
-		</form>
+	<section class="pagina">
+		<h1>Resultaten (15)</h1>
+		<p>Voor: verhalen, variatie </p>
+		<article>
+			<img src="images/paranoia.png" alt="afbeelding verhaal">
+			<h3>Paranoia</h3>
+			<a href="paranoia.html">Lezen</a>
+			<footer>
+				<button class="special"><img src="images/favoriet.png" alt="toevoegen aan favorieten">Favoriet</button>
+			</footer>
+		</article>
+		<article>
+			<img src="images/verliefd.jpeg" alt="afbeelding verhaal">
+			<h3>Verliefd</h3>
+			<a href="paranoia.html">Lezen</a>
+			<footer>
+				<button class="special"><img src="images/favoriet.png" alt="toevoegen aan favorieten">Favoriet</button>
+			</footer>
+		</article>
+	</section>
+	<section id="kies-lijst" class="">
+		<button>Overslaan</button>
+		<h1>Voeg 'Paranoia' toe aan een lijst:</h1>
+		<button>Griekenland</button>
+		<button>Rustgevend</button>
+		<a href="">Maak een nieuwe lijst</a>
+	</section>
+	<div id="toegevoegd-lijst" class="">
+		<p>Verhaal is toegevoegd aan 'Griekenland'.</p>
+		<a href="griekenland.html">Bekijken</a>
 	</div>
 	<footer>
 		<a href="">Over ons</a>
@@ -85,6 +89,6 @@
 		<a href="">Contact</a>
 		<img src="images/transavia.png" alt="transavia logo">
 	</footer>
+	<script src="js/script.js"></script>
 </body>
-
 </html>

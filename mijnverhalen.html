@@ -4,11 +4,11 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="initial-scale=1">
-	<title>Inloggen | 99 verhalen voor op reis</title>
+	<title>Mijn Verhalen | 99 verhalen voor op reis</title>
 	<link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body>
+<body class="no-background">
 	<header>
 		<div id="header-top">
 			<a href="index.html"><img src="images/transavia.png" alt="Transavia logo"></a>
@@ -23,12 +23,12 @@
 		</div>
 		<nav>
 			<ul>
-				<li><a href="">Verhalen
-				</a></li>
+				<li><a href="">Verhalen</a>
+				</li>
 				<li><a href="">Bundels</a></li>
 				<li><a href="">Sferen</a>
 					<ul>
-						<li><a href="">Non-fictie</a></li>
+						<li><a href="">Nonfictie</a></li>
 						<li><a href="">Fictie</a></li>
 						<li><a href="">Positief</a></li>
 						<li><a href="">Negatief</a></li>
@@ -53,32 +53,39 @@
 			</ul>
 		</nav>
 	</header>
-	<div>
-		<form action="get">
-			<fieldset>
-				<legend>Inloggen</legend>
-				<p>Vul je e-mailadres en wachtwoord in om in te loggen. Je kunt direct inloggen met een Transavia account!</p>
-				<label for="input-email">E-mailadres</label>
-				<input type="email" id="input-email" placeholder="gebruiker@domein.nl">
-				<label for="input-password">Wachtwoord</label>
-				<input type="password" id="input-password">
-				<input type="submit" value="Inloggen">
-			</fieldset>
-		</form>
-		<form action="get">
-			<fieldset>
-				<legend>Een account aanmaken</legend>
-				<p>Vul je gegevens in om een account aan te maken.</p>
-				<label for="input-naam">Naam</label>
-				<input type="text" id="input-naam" placeholder="b.v. Elisa Boer">
-				<label for="input-e-mail">E-mailadres</label>
-				<input type="email" id="input-e-mail" placeholder="gebruiker@domein.nl">
-				<label for="input-pw">Wachtwoord</label>
-				<input type="password" id="input-pw">
-				<input type="submit" value="Account aanmaken">
-			</fieldset>
-		</form>
-	</div>
+	<section class="pagina">
+		<h1>Mijn verhalen</h1>
+		<a href="">Downloads</a>
+		<a href="">Mijn lijsten</a>
+		<p>Alles downloaden</p>
+		<button class="on"></button>
+		<div class="fav-verhalen">
+			<article>
+				<img src="images/paranoia.png" alt="afbeelding verhaal">
+				<h3>Paranoia</h3>
+				<a href="paranoia.html">Lezen</a>
+				<footer>
+					<button><img src="images/favoriet.png" alt="toevoegen aan favorieten">Favoriet</button>
+				</footer>
+			</article>
+			<article>
+				<img src="images/verliefd.jpeg" alt="afbeelding verhaal">
+				<h3>Verliefd</h3>
+				<a href="paranoia.html">Lezen</a>
+				<footer>
+					<button><img src="images/favoriet.png" alt="toevoegen aan favorieten">Favoriet</button>
+				</footer>
+			</article>
+			<article>
+				<img src="images/Dromerig.jpeg" alt="afbeelding verhaal">
+				<h3>Dromerig</h3>
+				<a href="paranoia.html">Lezen</a>
+				<footer>
+					<button><img src="images/favoriet.png" alt="toevoegen aan favorieten">Favoriet</button>
+				</footer>
+			</article>
+		</div>
+	</section>
 	<footer>
 		<a href="">Over ons</a>
 		<a href="">Cookie-voorwaarden</a>

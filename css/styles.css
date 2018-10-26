@@ -1,4 +1,4 @@
-/* generic styles*/
+/*GENERIEKE STYLES*/
 
 @font-face {
 	font-family: "Nexa Regular";
@@ -55,6 +55,13 @@ p {
 a {
 	text-decoration: none;
 	transition: all .3s;
+	color: #606060;
+	font-size: 1.2em;
+	font-family: "Nexa Regular", helvetica, sans-serif;
+}
+
+a:hover {
+	color: #2800a0;
 }
 
 button {
@@ -89,7 +96,9 @@ ul {
 	margin: 0;
 }
 
-/* bovenste deel van de header(groen)*/
+/*HEADER*/
+
+/*witte deel*/
 
 header div {
 	background-color: white;
@@ -111,13 +120,13 @@ header a:nth-of-type(1) {
 	margin-right: auto;
 }
 
-/* titels 'Mijn verhalen' en 'Profiel' alleen weergeven bij breeder display*/
+/* titels alleen bij breeder display*/
 
 header div h2 {
 	display: none;
 }
 
-/* onderste deel van de header(wit)*/
+/*groene deel*/
 
 nav a {
 	color: white;
@@ -155,13 +164,21 @@ nav ul ul {
 	width: 9.8em;
 }
 
-/* formulier */
+/*FORMULIER*/
 
 form {
 	background-color: rgba(255, 255, 255, 0.9);
 	border-radius: 1em;
 	margin: 0 auto 2.7em;
 	width: 20em;
+}
+
+form p {
+	color: #202020;
+	font-family: "Nexa Bold", helvetica, sans-serif;
+	font-size: 1, 2em;
+	margin: 0;
+	padding: 0 0 0.1em;
 }
 
 /*formulieren loginpagina ruimte geven*/
@@ -243,14 +260,6 @@ input:focus:valid {
 	border: 2px solid #4de298;
 }
 
-form p {
-	color: #202020;
-	font-family: "Nexa Bold", helvetica, sans-serif;
-	font-size: 1, 2em;
-	margin: 0;
-	padding: 0 0 0.1em;
-}
-
 p label {
 	color: #606060;
 	font-family: "Nexa Regular", helvetica, sans-serif;
@@ -284,37 +293,12 @@ input[type=submit]:valid {
 	border: 1px solid #ca2b55;
 }
 
-/*sections*/
+/*SECTIONS*/
 
-section:nth-of-type(2) {
-	background-color: #f3e5d8;
-	height: 47em;
-}
+/*BUTTONS ONDERAAN SECTION*/
 
-section:nth-of-type(2) footer a {
-	background-color: #00d66c;
-	box-shadow: 0 0.1875em 0.0625em #1e9162;
-}
-
-section:nth-of-type(2) footer a:hover {
-	background-color: #4de298;
-}
-
-section:nth-of-type(2) footer a:active {
-	box-shadow: 0 -0.1875em 0.0625em #1e9162;
-}
-
-section:nth-of-type(2) h3 {
-	color: #00d66c;
-}
-
-section:nth-of-type(3) {
-	background-color: white;
-	height: 49em;
-}
-
-section:nth-of-type(3) h2 {
-	color: #ff3268;
+section > a {
+	font-size: 1.5em;
 }
 
 section > footer {
@@ -343,14 +327,73 @@ section footer a:active {
 	box-shadow: 0 -0.1875em 0.0625em #ca2b55;
 }
 
-/* articles scrollbaar maken */
+/*ARTICLES*/
+
+/*scrollbaar maken*/
 
 section div {
 	display: flex;
 	overflow-x: scroll;
 }
 
-/* articles van: Ontdekken > sorteer filter*/
+/*buttons en links*/
+
+button {
+	border-radius: 2rem;
+	bottom: 1.2em;
+	font-size: 1em;
+	padding: 0.55em 0.8em;
+	right: 1em;
+}
+
+button img {
+	margin-right: 0.5em;
+	width: 1.1em;
+}
+
+article a {
+	font-size: 1.1em;
+	border-radius: 2em;
+	bottom: 1em;
+	left: .8em;
+	padding: 0.45em 1.6em;
+}
+
+article a,
+article button {
+	background-color: #969696;
+	border: none;
+	box-shadow: 0 0.1875em 0.0625em #606060;
+	color: white;
+	position: absolute;
+}
+
+article a:hover,
+article button:hover {
+	background-color: #cccccc;
+	color: white;
+}
+
+article a:active,
+article button:active {
+	box-shadow: 0 -0.1875em 0.0625em #120145;
+	background-color: #ff3268;
+}
+
+/*section ONTDEKKEN*/
+
+section:nth-of-type(2) {
+	background-color: #f3e5d8;
+	height: 47em;
+}
+
+/*titels articles groen*/
+
+section:nth-of-type(2) h3 {
+	color: #00d66c;
+}
+
+/*sorteerfunctie*/
 
 #sorteren {
 	display: flex;
@@ -376,6 +419,7 @@ section div {
 
 #sorteren button:nth-of-type(1) {
 	background-color: #969696;
+	border-radius: 0;
 	border-bottom-left-radius: 1.5em;
 	border-top-left-radius: 1.5em;
 	color: white;
@@ -392,6 +436,7 @@ section div {
 }
 
 #sorteren button:nth-of-type(2) {
+	border-radius: 0;
 	border-bottom-right-radius: 1.5em;
 	border-top-right-radius: 1.5em;
 }
@@ -406,8 +451,31 @@ section div {
 	background-color: #e6e6e6;
 }
 
+/*'alle verhalen' button*/
 
-/* articles van: Bundels*/
+section:nth-of-type(2) footer a {
+	background-color: #00d66c;
+	box-shadow: 0 0.1875em 0.0625em #1e9162;
+}
+
+section:nth-of-type(2) footer a:hover {
+	background-color: #4de298;
+}
+
+section:nth-of-type(2) footer a:active {
+	box-shadow: 0 -0.1875em 0.0625em #1e9162;
+}
+
+/*section BUNDELS*/
+
+section:nth-of-type(3) {
+	background-color: white;
+	height: 49em;
+}
+
+section:nth-of-type(3) h2 {
+	color: #ff3268;
+}
 
 section:nth-of-type(3) article {
 	background-color: #f5f8fa;
@@ -418,51 +486,7 @@ article p {
 	padding: 0 0.6em;
 }
 
-/* knoppen van articles*/
-
-article a,
-article button {
-	background-color: #969696;
-	border: none;
-	box-shadow: 0 0.1875em 0.0625em #606060;
-	color: white;
-	position: absolute;
-}
-
-article a {
-	font-size: 1.1em;
-	border-radius: 2em;
-	bottom: 1em;
-	left: .8em;
-	padding: 0.45em 1.6em;
-}
-
-
-button {
-	border-radius: 2rem;
-	bottom: 0.9em;
-	font-size: 1em;
-	padding: 0.55em 0.8em;
-	right: 1em;
-}
-
-article a:hover,
-article button:hover {
-	background-color: #cccccc;
-}
-
-article a:active,
-article button:active {
-	box-shadow: 0 -0.1875em 0.0625em #120145;
-	background-color: #ff3268;
-}
-
-button img {
-	margin-right: 0.5em;
-	width: 1.1em;
-}
-
-/*footer*/
+/*FOOTER PAGINA*/
 
 body > footer {
 	background-color: #f5f8fa;
@@ -486,58 +510,48 @@ body > footer a:hover {
 body > footer img {
 	margin: 1em auto;
 	width: 12em;
-
 }
 
-/* verhaalpagina */
+/*PAGINA ZONDER ACHTERGROND*/
 
-body#verhaal {
+body.no-background {
 	background-image: none;
 	background-color: #f3e5d8;
 }
 
-body#verhaal > div {
+
+/*VERHAALPAGINA*/
+
+#img-verhaal {
 	background-color: none;
 	background-image: url(../images/verhaalMobiel.png);
 	background-size: 100%;
 	width: 100%;
 	height: 312em;
-	transition: all 1sc ease-out;
 }
 
 section#verhaalinfo {
 	display: flex;
 	flex-direction: column;
-	margin: 1.5em;
+	margin: 0;
 	margin-bottom: 2em;
 }
 
 section#verhaalinfo a {
-	color: #606060;
-	font-size: 1.2em;
-}
-
-section#verhaalinfo a:hover {
-	color: #2800a0;
-}
-
-section#verhaalinfo a:before {
-	content: "<";
-	font-size: 1.6em;
-	padding-right: 0.3em;
+	margin: 1em;
 }
 
 section#verhaalinfo h1 {
 	text-align: left;
 	font-size: 3em;
 	color: #ff3268;
-	margin: 0.8em 0.2em 0.5em;
+	margin: 0em 1.5em 0.5em;
 }
 
 section#verhaalinfo p {
 	font-family: "Nexa Bold", helvetica, sans-serif;
 	font-size: 1.4em;
-	margin: 0 0.4em;
+	margin: 0 3.5em;
 }
 
 section#verhaalinfo p:after {
@@ -565,6 +579,216 @@ section#verhaalinfo button:active {
 	background-color: #ff3268;
 }
 
+/*'MIJN VERHALEN', 'DOWNLOADS', 'MIJN LIJSTEN'*/
+
+.pagina {
+	position: relative;
+}
+
+.pagina h1 {
+	color: #2800a0;
+	font-size: 2.6em;
+	margin-bottom: 0.5em;
+	text-align: left;
+	padding-left: 2.2em;
+}
+
+section.pagina div {
+	display: block;
+}
+
+.pagina article {
+	margin: 2em auto;
+}
+
+/*MIJN VERHALEN PAGINA*/
+
+/*links 'downloads' en 'mijn lijsten'*/
+
+.pagina h1 + a,
+.pagina h1 + a + a {
+	display: block;
+	padding: 0.5em 1.8em;
+	background-color: #f5f8fa;
+	margin-bottom: 0.2em;
+	position: relative;
+}
+
+.pagina h1 + a:after,
+.pagina h1 + a + a:after {
+	content: ">";
+	font-size: 1.3em;
+	position: absolute;
+	right: 0.8em;
+	bottom: 0.12em;
+}
+
+.pagina p {
+	color: black;
+	font-family: "Nexa Bold", helvetica, sans-serif;
+	font-size: 1.5em;
+	padding-left: 4em;
+	margin-bottom: 0.5em;
+}
+
+/*'alles downloaden' knop*/
+
+.pagina > button {
+	transition: all 0.5s;
+}
+
+.pagina > button.off {
+	padding: 1em;
+	height: 1em;
+	position: absolute;
+	top: 15.3em;
+	right: 8em;
+	background-color: #969696;
+}
+
+.pagina > button.on {
+	padding: 1em;
+	height: 1em;
+	position: absolute;
+	top: 15.3em;
+	right: 6em;
+	background-color: #969696;
+}
+
+.pagina > button:after {
+	content: " ";
+	background-color: #00d66c;
+	z-index: -1;
+	width: 3.5em;
+	height: 1em;
+	position: absolute;
+	border-radius: 1em;
+	top: 0.6em;
+
+}
+
+.pagina > button.on:after {
+	right: 1em;
+}
+
+/*favoriet button roze*/
+
+.fav-verhalen button {
+	background-color: rgba(255, 50, 104, 0.5);
+	box-shadow: 0 0.1875em 0.0625em rgba(255, 50, 104, 0.8);
+}
+
+.fav-verhalen button:hover {
+	background-color: rgba(255, 50, 104, 0.25);
+}
+
+/*RESULTATEN PAGINA*/
+
+#kies-lijst {
+	background-color: #f5f8fa;
+	position: fixed;
+	height: 22em;
+	bottom: -22em;
+	transition: bottom .45s ease-out;
+}
+
+#kies-lijst.show {
+	bottom: 0em;
+}
+
+#kies-lijst h1 {
+	color: #202020;
+	text-align: left;
+	font-size: 1.6em;
+	padding: 0.6em 1.5em;
+	margin: 0;
+}
+
+#kies-lijst button {
+	border: none;
+	background-color: #f5f8fa;
+	display: block;
+	font-family: "Nexa Regular", helvetica, sans-serif;
+}
+
+#kies-lijst button:first-of-type,
+#kies-lijst a {
+	color: #ff3268;
+	font-size: 1.4em;
+	font-family: "Nexa Bold", helvetica, sans-serif;
+	margin-left: auto;
+	padding: 1em 2em;
+	margin-right: 1.5em;
+}
+
+#kies-lijst button:nth-of-type(2),
+#kies-lijst button:last-of-type {
+	padding: 1em 16em 0.8em 4em;
+	font-size: 1.4em;
+	background-color: white;
+	margin-bottom: 0.5em;
+}
+
+#kies-lijst button:nth-of-type(2):before,
+#kies-lijst button:last-of-type:before {
+	content: " ";
+	width: 0.8em;
+	height: 0.8em;
+	border: 2px solid #ff3268;
+	border-radius: 1em;
+	position: absolute;
+	left: 2em;
+}
+
+#kies-lijst a {
+	position: absolute;
+	left: 4em;
+}
+
+/*Melding: 'toegevoegd aan lijst'*/
+
+#toegevoegd-lijst {
+	height: 7em;
+	display: flex;
+	background-color: white;
+	position: fixed;
+	bottom: -7em;
+	transition: bottom .45s ease-out;
+}
+
+
+#toegevoegd-lijst.show {
+	height: 7em;
+	display: flex;
+	background-color: white;
+	position: fixed;
+	bottom: 0;
+}
+
+#toegevoegd-lijst p {
+	max-width: 13em;
+	margin: 1.4em 2em;
+}
+
+#toegevoegd-lijst a {
+	color: #ff3268;
+	font-family: 'Nexa Bold', helvetica, sans-serif;
+	font-size: 1.4em;
+	margin: 1.8em 3em 1.8em 1.8em;
+}
+
+#toegevoegd-lijst a:hover {
+	color: rgba(255, 50, 104, 0.5);
+}
+
+/*GRIEKENLAND PAGINA*/
+
+a.terug:before {
+	content: "<";
+	font-size: 1.6em;
+	padding-right: 0.3em;
+}
+
 @media(min-width: 30em) {
 	body {
 		background-size: 420%;
@@ -578,279 +802,280 @@ section#verhaalinfo button:active {
 	#sorteren p {
 		font-size: 1.3em;
 	}
+}
 
-	@media(min-width: 40em) {
-		/*achtergrond aanpassen*/
-		body {
-			background-size: 350%;
-		}
-
-		/*Header titels verschijnen*/
-		header div a {
-			display: flex;
-			height: 4em;
-			margin-left: 1.5em;
-		}
-
-		header div h2 {
-			display: block;
-			color: #00d66c;
-			font-size: 1.4em;
-			margin: 0.1em 0.1em 0 0;
-			transition: all .5s;
-		}
-
-		header div h2:hover {
-			color: #5e40b8;
-		}
-
-
-		/* verhaalpagina: waardering komt naast h1 */
-		body#verhaal {
-			position: relative;
-		}
-
-		body#verhaal button {
-			position: absolute;
-			right: 3em;
-			top: 12.8em;
-			height: 2em;
-		}
-
-		body#verhaal h1 {
-			font-size: 3.5em;
-			padding-bottom: 1em;
-		}
-
-		body#verhaal p {
-			position: absolute;
-			right: 18em;
-			top: 14em;
-		}
-
-		body#verhaal > div {
-			background-color: none;
-			background-image: url(../images/verhaalIpad.png);
-			background-size: 140%;
-			background-position: -10em -3em;
-			width: 100%;
-			height: 400em;
-		}
+@media(min-width: 40em) {
+	/*achtergrond aanpassen*/
+	body {
+		background-size: 350%;
 	}
 
-	@media(min-width: 50em) {
-		h1 {
-			font-size: 3em;
-		}
-
-		body {
-			background-size: 270%;
-			background-position: 0 2em;
-		}
-		/*Footer items gaan naast elkaar staan*/
-		body > footer {
-			flex-direction: row;
-			position: relative;
-			height: 7em;
-		}
-
-		body > footer a {
-			margin-left: 2em;
-			margin-top: 0.5em;
-		}
-
-		body > footer > img {
-			position: absolute;
-			bottom: 1em;
-			right: 2em;
-		}
+	/*Header titels verschijnen*/
+	header div a {
+		display: flex;
+		height: 4em;
+		margin-left: 1.5em;
 	}
 
-	@media(min-width: 60em) {
-		body {
-			background-size: 230%;
-		}
-
-		body#verhaal > div {
-			background-color: none;
-			background-image: url(../images/verhaalDesktop.png);
-			background-size: 100%;
-			background-position: -10em 0;
-			width: 123%;
-			height: 500em;
-		}
+	header div h2 {
+		display: block;
+		color: #00d66c;
+		font-size: 1.1em;
+		margin: 0.4em -0.2em 0 0;
+		transition: all .5s;
 	}
 
-	@media(min-width: 65em) {
-
-		body {
-			background-size: 200%;
-		}
-
-		/*De h1 komt naast het formulier*/
-		body section:nth-of-type(1) {
-			display: flex;
-			margin: 3em 10%;
-		}
-
-		body section:nth-of-type(1) h1 {
-			width: 40%;
-			text-align: left;
-			margin-right: 4%;
-			margin-top: -0.001em;
-		}
-
-		/* formulier groeit mee met schermbreedte*/
-		form {
-			width: 50%;
-			max-width: 35em;
-		}
-
-		/* Login-pagina: de twee formulieren op het loginscherm komen naast elkaar*/
-		header + div {
-			display: flex;
-			margin: 3em 5%;
-		}
-
-		header + div form {
-			width: 45%;
-		}
+	header div h2:hover {
+		color: #5e40b8;
 	}
 
-	@media(min-width: 70em) {
-		/*Het sorteermechanisme komt naast de header bij section: ontdekken*/
-		section:nth-of-type(2) {
-			position: relative;
-		}
-
-		section:nth-of-type(2) h2 {
-			margin-bottom: 0.8em;
-		}
-
-		div#sorteren {
-			position: absolute;
-			top: 2em;
-			right: 1em;
-		}
-
-		/* responsive maken artikelen 3-koloms-grid*/
-		section div:nth-of-type(2) {
-			display: grid;
-			grid-template-columns: 25% 25% 25%;
-			grid-gap: 5em;
-			margin: 0 7%;
-		}
-
-		section:nth-of-type(2) {
-			height: 89em;
-		}
-
-		section:nth-of-type(3) div {
-			display: grid;
-			grid-template-columns: 25% 25% 25%;
-			grid-gap: 5em;
-			margin: 0 7%;
-		}
-
-		section:nth-of-type(3) {
-			height: 81em;
-		}
-
-		body#verhaal {
-			position: relative;
-		}
-
-		body#verhaal button {
-			position: absolute;
-			right: 10em;
-			top: 9em;
-		}
-
-		body#verhaal p {
-			position: absolute;
-			right: 21em;
-			top: 10em;
-		}
-
-		body#verhaal h1 {
-			font-size: 3.5em;
-			padding-bottom: 0.5em;
-		}
+	/* verhaalpagina: waardering komt naast h1 */
+	section#verhaalinfo {
+		position: relative;
 	}
 
-	@media(min-width: 78em) {
-		body {
-			background-size: 160%;
-		}
-
-		/* groene deel header komt in het witte deel*/
-		header {
-			position: relative;
-		}
-
-		header nav {
-			position: absolute;
-			width: 45%;
-			top: 30%;
-			left: 22%;
-		}
-
-		header nav > ul {
-			border-top-left-radius: 1em;
-			border-top-right-radius: 1em;
-		}
+	section#verhaalinfo button {
+		position: absolute;
+		right: 3em;
+		top: 8em;
+		height: 2em;
 	}
 
-	@media(min-width: 78em) {
-		/* responsive maken artikelen 4-koloms-grid*/
-		section div:nth-of-type(2) {
-			grid-template-columns: 18.5% 18.5% 18.5% 18.5%;
-			grid-gap: 5em;
-		}
-
-		section:nth-of-type(2) {
-			height: 65em;
-		}
-
-		section:nth-of-type(3) {
-			height: 48.5em;
-		}
-
-		section:nth-of-type(3) div {
-			grid-template-columns: 19% 19% 19% 19%;
-			grid-gap: 4em;
-			margin: 0;
-		}
-
-		section div:nth-of-type(2) {
-			max-width: 90em;
-			margin: 0 auto;
-		}
-
-		#grid {
-			max-width: 90em;
-			margin: 0 auto;
-		}
-
-		#sorteren {
-			margin-right: 2%;
-		}
-
-		body#verhaal h1 {
-			font-size: 5em;
-			padding-bottom: 0;
-		}
-
+	section#verhaalinfo h1 {
+		font-size: 3.5em;
+		padding-bottom: 2em;
+		margin-bottom: 0;
 	}
 
-	@media(min-width: 84em) {
-		body {
-			background-size: 130%;
-			background-position: 0 4em;
-		}
-
-		/*h1 homepage wordt groter*/
-		body section:nth-of-type(1) h1 {
-			font-size: 4em;
-		}
+	section#verhaalinfo p {
+		position: absolute;
+		right: 18em;
+		top: 9.3em;
 	}
+
+	#img-verhaal {
+		background-color: none;
+		background-image: url(../images/verhaalIpad.png);
+		background-size: 140%;
+		background-position: -10em -3em;
+		width: 100%;
+		height: 400em;
+	}
+}
+
+@media(min-width: 50em) {
+	h1 {
+		font-size: 3em;
+	}
+
+	body {
+		background-size: 270%;
+		background-position: 0 2em;
+	}
+	/*Footer items gaan naast elkaar staan*/
+	body > footer {
+		flex-direction: row;
+		position: relative;
+		height: 7em;
+	}
+
+	body > footer a {
+		margin-left: 2em;
+		margin-top: 0.5em;
+	}
+
+	body > footer > img {
+		position: absolute;
+		bottom: 1em;
+		right: 2em;
+	}
+}
+
+@media(min-width: 60em) {
+	body {
+		background-size: 230%;
+	}
+
+	div#img-verhaal {
+		background-color: none;
+		background-image: url(../images/verhaalDesktop.png);
+		background-size: 100%;
+		background-position: -10em 0;
+		width: 123%;
+		height: 500em;
+	}
+}
+
+@media(min-width: 65em) {
+
+	body {
+		background-size: 200%;
+	}
+
+	/*De h1 komt naast het formulier*/
+	body section:nth-of-type(1) {
+		display: flex;
+		margin: 3em 10%;
+	}
+
+	body section:nth-of-type(1) h1 {
+		width: 40%;
+		text-align: left;
+		margin-right: 4%;
+		margin-top: -0.001em;
+	}
+
+	/* formulier groeit mee met schermbreedte*/
+	form {
+		width: 50%;
+		max-width: 35em;
+	}
+
+	/* Login-pagina: de twee formulieren op het loginscherm komen naast elkaar*/
+	header + div {
+		display: flex;
+		margin: 3em 5%;
+	}
+
+	header + div form {
+		width: 45%;
+	}
+}
+
+@media(min-width: 70em) {
+	/*Het sorteermechanisme komt naast de header bij section: ontdekken*/
+	section:nth-of-type(2) {
+		position: relative;
+	}
+
+	section:nth-of-type(2) h2 {
+		margin-bottom: 0.8em;
+	}
+
+	div#sorteren {
+		position: absolute;
+		top: 2em;
+		right: 1em;
+	}
+
+	/* responsive maken artikelen 3-koloms-grid*/
+	section div:nth-of-type(2) {
+		display: grid;
+		grid-template-columns: 25% 25% 25%;
+		grid-gap: 5em;
+		margin: 0 7%;
+	}
+
+	section:nth-of-type(2) {
+		height: 89em;
+	}
+
+	section:nth-of-type(3) div {
+		display: grid;
+		grid-template-columns: 25% 25% 25%;
+		grid-gap: 5em;
+		margin: 0 7%;
+	}
+
+	section:nth-of-type(3) {
+		height: 81em;
+	}
+
+	section#verhaalinfo {
+		position: relative;
+	}
+
+	section#verhaalinfo button {
+		position: absolute;
+		right: 10em;
+		top: 9em;
+	}
+
+	section#verhaalinfo p {
+		position: absolute;
+		right: 21em;
+		top: 10em;
+	}
+
+	section#verhaalinfo h1 {
+		font-size: 3.5em;
+		padding-bottom: 0.5em;
+	}
+}
+
+@media(min-width: 78em) {
+	body {
+		background-size: 160%;
+	}
+
+	/* groene deel header komt in het witte deel*/
+	header {
+		position: relative;
+	}
+
+	header nav {
+		position: absolute;
+		width: 45%;
+		top: 38%;
+		left: 22%;
+	}
+
+	header nav > ul {
+		border-top-left-radius: 1em;
+		border-top-right-radius: 1em;
+	}
+}
+
+@media(min-width: 78em) {
+	/* responsive maken artikelen 4-koloms-grid*/
+	section div:nth-of-type(2) {
+		grid-template-columns: 18.5% 18.5% 18.5% 18.5%;
+		grid-gap: 5em;
+	}
+
+	section:nth-of-type(2) {
+		height: 65em;
+	}
+
+	section:nth-of-type(3) {
+		height: 48.5em;
+	}
+
+	section:nth-of-type(3) div {
+		grid-template-columns: 19% 19% 19% 19%;
+		grid-gap: 4em;
+		margin: 0;
+	}
+
+	section div:nth-of-type(2) {
+		max-width: 90em;
+		margin: 0 auto;
+	}
+
+	#grid {
+		max-width: 90em;
+		margin: 0 auto;
+	}
+
+	#sorteren {
+		margin-right: 2%;
+	}
+
+	body#verhaal h1 {
+		font-size: 5em;
+		padding-bottom: 0;
+	}
+
+}
+
+@media(min-width: 84em) {
+	body {
+		background-size: 130%;
+		background-position: 0 4em;
+	}
+
+	/*h1 homepage wordt groter*/
+	body section:nth-of-type(1) h1 {
+		font-size: 4em;
+	}
+}
