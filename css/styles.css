@@ -437,7 +437,7 @@ article a {
 }
 
 
-article button {
+button {
 	border-radius: 2rem;
 	bottom: 0.9em;
 	font-size: 1em;
@@ -456,7 +456,7 @@ article button:active {
 	background-color: #ff3268;
 }
 
-article button img {
+button img {
 	margin-right: 0.5em;
 	width: 1.1em;
 }
@@ -495,9 +495,13 @@ body#verhaal {
 	background-color: #f3e5d8;
 }
 
-body#verhaal > img {
-	width: 120%;
-	margin-left: -10%;
+body#verhaal > div {
+	background-color: none;
+	background-image: url(../images/verhaalMobiel.png);
+	background-size: 100%;
+	width: 100%;
+	height: 312em;
+	transition: all 1sc ease-out;
 }
 
 section#verhaalinfo {
@@ -524,6 +528,7 @@ section#verhaalinfo a:before {
 
 section#verhaalinfo h1 {
 	text-align: left;
+	font-size: 3em;
 	color: #ff3268;
 	margin: 0.8em 0.2em 0.5em;
 }
@@ -546,13 +551,8 @@ section#verhaalinfo button {
 	border: none;
 	color: white;
 	font-size: 1.3em;
-	padding: 0.45em 1.6em;
+	padding: 0.45em 1em;
 	margin: 1.5em auto;
-}
-
-section#verhaalinfo button:before {
-	content: "♥";
-	margin-right: 0.5em;
 }
 
 section#verhaalinfo button:hover {
@@ -613,6 +613,7 @@ section#verhaalinfo button:active {
 			position: absolute;
 			right: 3em;
 			top: 12.8em;
+			height: 2em;
 		}
 
 		body#verhaal h1 {
@@ -624,6 +625,15 @@ section#verhaalinfo button:active {
 			position: absolute;
 			right: 18em;
 			top: 14em;
+		}
+
+		body#verhaal > div {
+			background-color: none;
+			background-image: url(../images/verhaalIpad.png);
+			background-size: 140%;
+			background-position: -9em -3em;
+			width: 100%;
+			height: 400em;
 		}
 	}
 
@@ -658,6 +668,15 @@ section#verhaalinfo button:active {
 	@media(min-width: 60em) {
 		body {
 			background-size: 230%;
+		}
+
+		body#verhaal > div {
+			background-color: none;
+			background-image: url(../images/verhaalDesktop.png);
+			background-size: 100%;
+			background-position: -10em 0;
+			width: 123%;
+			height: 500em;
 		}
 	}
 
@@ -743,13 +762,13 @@ section#verhaalinfo button:active {
 		body#verhaal button {
 			position: absolute;
 			right: 10em;
-			top: 10em;
+			top: 9em;
 		}
 
 		body#verhaal p {
 			position: absolute;
 			right: 21em;
-			top: 11em;
+			top: 10em;
 		}
 
 		body#verhaal h1 {
@@ -812,10 +831,15 @@ section#verhaalinfo button:active {
 			margin: 0 auto;
 		}
 
+		#sorteren {
+			margin-right: 2%;
+		}
+
 		body#verhaal h1 {
 			font-size: 5em;
 			padding-bottom: 0;
 		}
+
 	}
 
 	@media(min-width: 84em) {
