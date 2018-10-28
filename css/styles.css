@@ -48,14 +48,14 @@ h3 {
 p {
 	color: #202020;
 	font-family: "Nexa Regular", helvetica, sans-serif;
-	font-size: 1.3em;
+	font-size: 1.2em;
 	line-height: 1.5em;
 }
 
 a {
 	text-decoration: none;
 	transition: all .3s;
-	color: #606060;
+	color: #969696;
 	font-size: 1.2em;
 	font-family: "Nexa Regular", helvetica, sans-serif;
 }
@@ -65,7 +65,6 @@ a:hover {
 }
 
 button {
-	font-family: "Nexa Bold", helvetica, sans-serif;
 	transition: all .25s;
 }
 
@@ -130,7 +129,8 @@ header div h2 {
 
 nav a {
 	color: white;
-	font-size: 1.2em;
+	font-size: 1.1em;
+	font-family: 'Nexa Regular', helvetica, sans-serif;
 }
 
 nav > ul {
@@ -157,7 +157,7 @@ nav ul ul {
 	font-family: "Nexa Regular", helvetica, sans-serif;
 	line-height: 200%;
 	margin-left: -3em;
-	margin-top: 2.2em;
+	margin-top: 2em;
 	padding: 0 1em;
 	position: absolute;
 	top: 0;
@@ -176,7 +176,7 @@ form {
 form p {
 	color: #202020;
 	font-family: "Nexa Bold", helvetica, sans-serif;
-	font-size: 1, 2em;
+	font-size: 1.2em;
 	margin: 0;
 	padding: 0 0 0.1em;
 }
@@ -262,7 +262,7 @@ input:focus:valid {
 
 p label {
 	color: #606060;
-	font-family: "Nexa Regular", helvetica, sans-serif;
+	font-family: 'Nexa Regular', helvetica, sans-serif;
 	font-size: 1em;
 	margin-left: 0.4em;
 }
@@ -297,10 +297,6 @@ input[type=submit]:valid {
 
 /*BUTTONS ONDERAAN SECTION*/
 
-section > a {
-	font-size: 1.2em;
-}
-
 section > footer {
 	margin: 3.5em 0 0;
 }
@@ -312,7 +308,6 @@ section footer a {
 	color: white;
 	display: block;
 	font-family: "Nexa Bold", helvetica, sans-serif;
-	font-size: 1.4em;
 	margin: 2em auto;
 	padding: 0.6em 1.6em;
 	text-align: center;
@@ -384,7 +379,7 @@ article button:active {
 
 section:nth-of-type(2) {
 	background-color: #f3e5d8;
-	height: 47em;
+	height: 43em;
 }
 
 /*titels articles groen*/
@@ -470,7 +465,7 @@ section:nth-of-type(2) footer a:active {
 
 section:nth-of-type(3) {
 	background-color: white;
-	height: 49em;
+	height: 47em;
 }
 
 section:nth-of-type(3) h2 {
@@ -479,7 +474,7 @@ section:nth-of-type(3) h2 {
 
 section:nth-of-type(3) article {
 	background-color: #f5f8fa;
-	height: 31em;
+	height: 28em;
 }
 
 article p {
@@ -497,9 +492,6 @@ body > footer {
 }
 
 body > footer a {
-	font-size: 1.2em;
-	color: #969696;
-	font-family: "Nexa Regular", helvetica, sans-serif;
 	padding: 1em 0 0 1em;
 }
 
@@ -545,7 +537,7 @@ section#verhaalinfo h1 {
 	text-align: left;
 	font-size: 3em;
 	color: #ff3268;
-	margin: 0em 1.5em 0.5em;
+	margin: 0em 1em 0.5em;
 }
 
 section#verhaalinfo p {
@@ -587,10 +579,9 @@ section#verhaalinfo button:active {
 
 .pagina h1 {
 	color: #2800a0;
-	font-size: 2.6em;
-	margin-bottom: 0.5em;
+	margin: 0.5em 0;
 	text-align: left;
-	padding-left: 2.2em;
+	padding-left: 1.4em;
 }
 
 section.pagina div {
@@ -598,7 +589,7 @@ section.pagina div {
 }
 
 .pagina article {
-	margin: 2em auto;
+	margin: 1em auto;
 }
 
 /*MIJN VERHALEN PAGINA*/
@@ -608,7 +599,7 @@ section.pagina div {
 .pagina h1 + a,
 .pagina h1 + a + a {
 	display: block;
-	padding: 0.5em 1.8em;
+	padding: 0.5em 2.3em;
 	background-color: #f5f8fa;
 	margin-bottom: 0.2em;
 	position: relative;
@@ -625,51 +616,85 @@ section.pagina div {
 
 .pagina p {
 	color: black;
-	font-family: "Nexa Bold", helvetica, sans-serif;
-	font-size: 1.5em;
-	padding-left: 4em;
-	margin-bottom: 0.5em;
+	font-family: "Nexa Regular", helvetica, sans-serif;
+	font-size: 1.2em;
+	padding-left: 1.8em;
+	margin: 0.9em;
+	transition: all 1s;
 }
 
 /*'alles downloaden' knop*/
 
 .pagina > button {
-	transition: all 0.5s;
-}
-
-.pagina > button.off {
 	padding: 1em;
 	height: 1em;
 	position: absolute;
-	top: 15.3em;
-	right: 8em;
+	top: 10.55em;
+	left: 16em;
 	background-color: #969696;
+	transition: all 1s;
 }
 
-.pagina > button.on {
+.pagina > button.show {
 	padding: 1em;
 	height: 1em;
 	position: absolute;
-	top: 15.3em;
-	right: 6em;
+	top: 10.55em;
+	left: 18.5em;
 	background-color: #969696;
 }
 
-.pagina > button:after {
-	content: " ";
-	background-color: #00d66c;
+.pagina > div#balk {
+	background-color: #606060;
 	z-index: -1;
 	width: 3.5em;
 	height: 1em;
 	position: absolute;
 	border-radius: 1em;
-	top: 0.6em;
-
+	top: 11.2em;
+	left: 17em;
+	transition: all 1s;
 }
 
-.pagina > button.on:after {
-	right: 1em;
+.pagina div#balk.show {
+	background-color: #00d66c;
 }
+
+#melding {
+	background-color: #00d66c;
+	width: 4em;
+	height: 1.7em;
+	border-radius: 0.8em;
+	position: absolute;
+	left: 16em;
+	top: 11em;
+	opacity: 0;
+	transition: all 1s;
+	z-index: -1;
+}
+
+#melding.show {
+	position: absolute;
+	top: 4.6em;
+	left: 17em;
+	opacity: 1;
+	z-index: 1;
+}
+
+#melding p {
+	color: white;
+	padding: 0;
+	margin: 0.1em 1.1em;
+}
+
+.dl-knop {
+	width: 4em;
+	height: 4em;
+	position: absolute;
+	right: 1.2em;
+	bottom: 5.5em;
+}
+
 
 /*favoriet button roze*/
 
@@ -687,9 +712,11 @@ section.pagina div {
 #kies-lijst {
 	background-color: #f5f8fa;
 	position: fixed;
-	height: 22em;
-	bottom: -22em;
+	height: 16em;
+	bottom: -16em;
 	transition: bottom .45s ease-out;
+	width: 100%;
+	max-width: 30em;
 }
 
 #kies-lijst.show {
@@ -699,7 +726,7 @@ section.pagina div {
 #kies-lijst h1 {
 	color: #202020;
 	text-align: left;
-	font-size: 1.6em;
+	font-size: 1.2em;
 	padding: 0.6em 1.5em;
 	margin: 0;
 }
@@ -714,17 +741,17 @@ section.pagina div {
 #kies-lijst button:first-of-type,
 #kies-lijst a {
 	color: #ff3268;
-	font-size: 1.4em;
+	font-size: 1em;
 	font-family: "Nexa Bold", helvetica, sans-serif;
 	margin-left: auto;
-	padding: 1em 2em;
-	margin-right: 1.5em;
+	padding: 1em 1em;
+	margin-right: 1em;
 }
 
 #kies-lijst button:nth-of-type(2),
 #kies-lijst button:last-of-type {
-	padding: 1em 16em 0.8em 4em;
-	font-size: 1.4em;
+	padding: 1em 20em 0.8em 4em;
+	font-size: 1em;
 	background-color: white;
 	margin-bottom: 0.5em;
 }
@@ -758,7 +785,6 @@ section.pagina div {
 
 
 #toegevoegd-lijst.show {
-	height: 7em;
 	display: flex;
 	background-color: white;
 	position: fixed;
@@ -766,15 +792,16 @@ section.pagina div {
 }
 
 #toegevoegd-lijst p {
+	font-size: 1.1em;
 	max-width: 13em;
-	margin: 1.4em 2em;
+	margin: 1.5em 2em 1em 1.3em;
 }
 
 #toegevoegd-lijst a {
 	color: #ff3268;
 	font-family: 'Nexa Bold', helvetica, sans-serif;
-	font-size: 1.4em;
-	margin: 1.8em 3em 1.8em 1.8em;
+	font-size: 1.2em;
+	margin: 1.8em 1.5em 0.5em 0.5em;
 }
 
 #toegevoegd-lijst a:hover {
@@ -783,10 +810,45 @@ section.pagina div {
 
 /*GRIEKENLAND PAGINA*/
 
+a.terug {
+	display: block;
+	margin: 1em 0 0 1em;
+	font-size: 1em;
+}
+
 a.terug:before {
 	content: "<";
 	font-size: 1.6em;
 	padding-right: 0.3em;
+}
+
+/*MIJN LIJSTEN PAGINA*/
+
+section.lijst {
+	background-color: #f5f8fa;
+	margin: 1em 0 0.5em;
+	height: 11em;
+	position: relative;
+}
+
+section.lijst img {
+	width: 10em;
+	height: 6em;
+	border-top-left-radius: 1em;
+	border-top-right-radius: 1em;
+	position: absolute;
+	bottom: 0;
+	left: 2em;
+}
+
+section.lijst img:nth-of-type(2) {
+	left: 13em;
+}
+
+section.lijst h2 {
+	color: #ff3268;
+	font-size: 1.2em;
+	margin-left: 1.6em;
 }
 
 @media(min-width: 30em) {
@@ -839,20 +901,20 @@ a.terug:before {
 	section#verhaalinfo button {
 		position: absolute;
 		right: 3em;
-		top: 8em;
+		top: 5em;
 		height: 2em;
 	}
 
 	section#verhaalinfo h1 {
 		font-size: 3.5em;
-		padding-bottom: 2em;
+		padding-bottom: 1em;
 		margin-bottom: 0;
 	}
 
 	section#verhaalinfo p {
 		position: absolute;
 		right: 16em;
-		top: 9.3em;
+		top: 6.4em;
 	}
 
 	#img-verhaal {
@@ -866,8 +928,8 @@ a.terug:before {
 }
 
 @media(min-width: 50em) {
-	h1 {
-		font-size: 3em;
+	#intro h1 {
+		font-size: 2.5em;
 	}
 
 	body {
@@ -915,12 +977,12 @@ a.terug:before {
 	}
 
 	/*De h1 komt naast het formulier*/
-	body section:nth-of-type(1) {
+	body section#intro {
 		display: flex;
 		margin: 3em 10%;
 	}
 
-	body section:nth-of-type(1) h1 {
+	body section#intro h1 {
 		width: 40%;
 		text-align: left;
 		margin-right: 4%;
@@ -946,8 +1008,9 @@ a.terug:before {
 
 @media(min-width: 70em) {
 	/*Het sorteermechanisme komt naast de header bij section: ontdekken*/
-	section:nth-of-type(2) {
+	section#ontdekken {
 		position: relative;
+		height: 89em;
 	}
 
 	section:nth-of-type(2) h2 {
@@ -966,10 +1029,6 @@ a.terug:before {
 		grid-template-columns: 25% 25% 25%;
 		grid-gap: 5em;
 		margin: 0 7%;
-	}
-
-	section:nth-of-type(2) {
-		height: 89em;
 	}
 
 	section:nth-of-type(3) div {
@@ -1035,7 +1094,7 @@ a.terug:before {
 		grid-gap: 5em;
 	}
 
-	section:nth-of-type(2) {
+	section#ontdekken {
 		height: 65em;
 	}
 
@@ -1073,6 +1132,6 @@ a.terug:before {
 
 	/*h1 homepage wordt groter*/
 	body section:nth-of-type(1) h1 {
-		font-size: 4em;
+		font-size: 3.5em;
 	}
 }
