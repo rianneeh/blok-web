@@ -33,7 +33,7 @@ h1 {
 
 h2 {
 	color: #00d66c;
-	font-size: 3em;
+	font-size: 2.5em;
 	margin: 0;
 	padding: 0.8em 0em 0.6em 0.5em;
 }
@@ -225,11 +225,19 @@ select {
 	transition: all .5s;
 }
 
+
 select {
 	width: 50%;
 	height: 2em;
 }
 
+#intro label:nth-of-type(2),
+#intro label:nth-of-type(3),
+select,
+input[type=radio],
+#intro p {
+	display: none;
+}
 
 input:hover,
 select:hover {
@@ -514,13 +522,7 @@ body.no-background {
 
 /*VERHAALPAGINA*/
 
-#img-verhaal {
-	background-color: none;
-	background-image: url(../images/verhaalMobiel.png);
-	background-size: 100%;
-	width: 100%;
-	height: 312em;
-}
+section.img-verhaal img {}
 
 section#verhaalinfo {
 	display: flex;
@@ -573,11 +575,11 @@ section#verhaalinfo button:active {
 
 /*'MIJN VERHALEN', 'DOWNLOADS', 'MIJN LIJSTEN'*/
 
-.pagina {
+section.pagina {
 	position: relative;
 }
 
-.pagina h1 {
+section.pagina h1 {
 	color: #2800a0;
 	margin: 0.5em 0;
 	text-align: left;
@@ -585,10 +587,12 @@ section#verhaalinfo button:active {
 }
 
 section.pagina div {
-	display: block;
+	display: grid;
+	grid-template-columns: 1fr;
 }
 
-.pagina article {
+
+section.pagina article {
 	margin: 1em auto;
 }
 
@@ -596,8 +600,8 @@ section.pagina div {
 
 /*links 'downloads' en 'mijn lijsten'*/
 
-.pagina h1 + a,
-.pagina h1 + a + a {
+section.pagina h1 + a,
+section.pagina h1 + a + a {
 	display: block;
 	padding: 0.5em 2.3em;
 	background-color: #f5f8fa;
@@ -605,8 +609,8 @@ section.pagina div {
 	position: relative;
 }
 
-.pagina h1 + a:after,
-.pagina h1 + a + a:after {
+section.pagina h1 + a:after,
+section.pagina h1 + a + a:after {
 	content: ">";
 	font-size: 1.3em;
 	position: absolute;
@@ -614,7 +618,7 @@ section.pagina div {
 	bottom: 0.12em;
 }
 
-.pagina p {
+section.pagina p {
 	color: black;
 	font-family: "Nexa Regular", helvetica, sans-serif;
 	font-size: 1.2em;
@@ -625,7 +629,7 @@ section.pagina div {
 
 /*'alles downloaden' knop*/
 
-.pagina > button {
+section.pagina > button {
 	padding: 1em;
 	height: 1em;
 	position: absolute;
@@ -635,7 +639,7 @@ section.pagina div {
 	transition: all 1s;
 }
 
-.pagina > button.show {
+section.pagina > button.show {
 	padding: 1em;
 	height: 1em;
 	position: absolute;
@@ -644,7 +648,7 @@ section.pagina div {
 	background-color: #969696;
 }
 
-.pagina > div#balk {
+section.pagina > div#balk {
 	background-color: #606060;
 	z-index: -1;
 	width: 3.5em;
@@ -656,15 +660,15 @@ section.pagina div {
 	transition: all 1s;
 }
 
-.pagina div#balk.show {
+section.pagina div#balk.show {
 	background-color: #00d66c;
 }
 
 #melding {
 	background-color: #00d66c;
-	width: 4em;
-	height: 1.7em;
-	border-radius: 0.8em;
+	width: 1.8em;
+	height: 1.8em;
+	border-radius: 1em;
 	position: absolute;
 	left: 16em;
 	top: 11em;
@@ -675,8 +679,8 @@ section.pagina div {
 
 #melding.show {
 	position: absolute;
-	top: 4.6em;
-	left: 17em;
+	top: 4.3em;
+	left: 9.8em;
 	opacity: 1;
 	z-index: 1;
 }
@@ -684,7 +688,7 @@ section.pagina div {
 #melding p {
 	color: white;
 	padding: 0;
-	margin: 0.1em 1.1em;
+	margin: 0.2em 0.4em 0 0.4em;
 }
 
 .dl-knop {
@@ -709,7 +713,7 @@ section.pagina div {
 
 /*RESULTATEN PAGINA*/
 
-#kies-lijst {
+section#kies-lijst {
 	background-color: #f5f8fa;
 	position: fixed;
 	height: 16em;
@@ -719,11 +723,11 @@ section.pagina div {
 	max-width: 30em;
 }
 
-#kies-lijst.show {
+section#kies-lijst.show {
 	bottom: 0em;
 }
 
-#kies-lijst h1 {
+section#kies-lijst h1 {
 	color: #202020;
 	text-align: left;
 	font-size: 1.2em;
@@ -731,15 +735,15 @@ section.pagina div {
 	margin: 0;
 }
 
-#kies-lijst button {
+section#kies-lijst button {
 	border: none;
 	background-color: #f5f8fa;
 	display: block;
 	font-family: "Nexa Regular", helvetica, sans-serif;
 }
 
-#kies-lijst button:first-of-type,
-#kies-lijst a {
+section#kies-lijst button:first-of-type,
+section#kies-lijst a {
 	color: #ff3268;
 	font-size: 1em;
 	font-family: "Nexa Bold", helvetica, sans-serif;
@@ -748,16 +752,16 @@ section.pagina div {
 	margin-right: 1em;
 }
 
-#kies-lijst button:nth-of-type(2),
-#kies-lijst button:last-of-type {
+section#kies-lijst button:nth-of-type(2),
+section#kies-lijst button:last-of-type {
 	padding: 1em 20em 0.8em 4em;
 	font-size: 1em;
 	background-color: white;
 	margin-bottom: 0.5em;
 }
 
-#kies-lijst button:nth-of-type(2):before,
-#kies-lijst button:last-of-type:before {
+section#kies-lijst button:nth-of-type(2):before,
+section#kies-lijst button:last-of-type:before {
 	content: " ";
 	width: 0.8em;
 	height: 0.8em;
@@ -767,14 +771,14 @@ section.pagina div {
 	left: 2em;
 }
 
-#kies-lijst a {
+section#kies-lijst a {
 	position: absolute;
 	left: 4em;
 }
 
 /*Melding: 'toegevoegd aan lijst'*/
 
-#toegevoegd-lijst {
+section#toegevoegd-lijst {
 	height: 7em;
 	display: flex;
 	background-color: white;
@@ -784,27 +788,27 @@ section.pagina div {
 }
 
 
-#toegevoegd-lijst.show {
+section#toegevoegd-lijst.show {
 	display: flex;
 	background-color: white;
 	position: fixed;
 	bottom: 0;
 }
 
-#toegevoegd-lijst p {
+section#toegevoegd-lijst p {
 	font-size: 1.1em;
 	max-width: 13em;
 	margin: 1.5em 2em 1em 1.3em;
 }
 
-#toegevoegd-lijst a {
+section#toegevoegd-lijst a {
 	color: #ff3268;
 	font-family: 'Nexa Bold', helvetica, sans-serif;
 	font-size: 1.2em;
 	margin: 1.8em 1.5em 0.5em 0.5em;
 }
 
-#toegevoegd-lijst a:hover {
+section#toegevoegd-lijst a:hover {
 	color: rgba(255, 50, 104, 0.5);
 }
 
@@ -857,24 +861,33 @@ section.lijst h2 {
 		background-position: -40em 6em;
 	}
 
+	h2 {
+		font-size: 3em;
+	}
+
+	/*Overzichtspagina: formulier*/
 	form {
 		width: 75%;
 		max-width: 30em;
 	}
-	#sorteren p {
-		font-size: 1.3em;
+
+	#intro label:nth-of-type(2),
+	#intro label:nth-of-type(3),
+	select,
+	input[type=radio],
+	#intro p {
+		display: inline-block;
 	}
 }
 
 @media(min-width: 40em) {
-	/*achtergrond aanpassen*/
 	body {
 		background-size: 350%;
 	}
 }
 
 @media(min-width: 45em) {
-	/*Header titels verschijnen*/
+	/* Header: titels verschijnen*/
 	header div a {
 		display: flex;
 		height: 4em;
@@ -893,7 +906,7 @@ section.lijst h2 {
 		color: #5e40b8;
 	}
 
-	/* verhaalpagina: waardering komt naast h1 */
+	/*Verhaalpagina: waardering komt naast h1 */
 	section#verhaalinfo {
 		position: relative;
 	}
@@ -917,6 +930,7 @@ section.lijst h2 {
 		top: 6.4em;
 	}
 
+	/*Verhaalpagina: formaat Tablet*/
 	#img-verhaal {
 		background-color: none;
 		background-image: url(../images/verhaalIpad.png);
@@ -925,17 +939,20 @@ section.lijst h2 {
 		width: 100%;
 		height: 400em;
 	}
+
+	/*Resultatenpagina: responsive articles*/
+	section.pagina div {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
 }
 
 @media(min-width: 50em) {
-	#intro h1 {
-		font-size: 2.5em;
-	}
-
 	body {
 		background-size: 270%;
 		background-position: 0 2em;
 	}
+
 	/*Footer items gaan naast elkaar staan*/
 	body > footer {
 		flex-direction: row;
@@ -953,6 +970,11 @@ section.lijst h2 {
 		bottom: 1em;
 		right: 2em;
 	}
+
+	/*Overzichtspagina: h1*/
+	#intro h1 {
+		font-size: 2.5em;
+	}
 }
 
 @media(min-width: 60em) {
@@ -960,6 +982,7 @@ section.lijst h2 {
 		background-size: 230%;
 	}
 
+	/*Verhaalpagina: formaat Desktop*/
 	#img-verhaal {
 		background-color: none;
 		background-image: url(../images/verhaalDesktop.png);
@@ -971,12 +994,17 @@ section.lijst h2 {
 }
 
 @media(min-width: 65em) {
-
 	body {
 		background-size: 200%;
 	}
 
-	/*De h1 komt naast het formulier*/
+	/*Formulieren groeien mee met schermbreedte*/
+	form {
+		width: 50%;
+		max-width: 35em;
+	}
+
+	/*Overzichtspagina: De h1 komt naast het formulier*/
 	body section#intro {
 		display: flex;
 		margin: 3em 10%;
@@ -987,15 +1015,10 @@ section.lijst h2 {
 		text-align: left;
 		margin-right: 4%;
 		margin-top: -0.001em;
+		font-size: 3.5em;
 	}
 
-	/* formulier groeit mee met schermbreedte*/
-	form {
-		width: 50%;
-		max-width: 35em;
-	}
-
-	/* Login-pagina: de twee formulieren op het loginscherm komen naast elkaar*/
+	/* Loginpagina: de twee formulieren op het loginscherm komen naast elkaar*/
 	header + div {
 		display: flex;
 		margin: 3em 5%;
@@ -1004,10 +1027,16 @@ section.lijst h2 {
 	header + div form {
 		width: 45%;
 	}
+
+	/*Resultatenpagina: responsive articles*/
+	section.pagina div {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+	}
 }
 
 @media(min-width: 70em) {
-	/*Het sorteermechanisme komt naast de header bij section: ontdekken*/
+	/*Overzichtspagina: Het sorteermechanisme komt naast de header bij section: ontdekken*/
 	section#ontdekken {
 		position: relative;
 		height: 89em;
@@ -1042,6 +1071,7 @@ section.lijst h2 {
 		height: 81em;
 	}
 
+	/*Verhaalpagina*/
 	section#verhaalinfo {
 		position: relative;
 	}
@@ -1069,7 +1099,7 @@ section.lijst h2 {
 		background-size: 160%;
 	}
 
-	/* groene deel header komt in het witte deel*/
+	/*Overzichtspagina: groene deel header schuift naar boven*/
 	header {
 		position: relative;
 	}
@@ -1085,10 +1115,16 @@ section.lijst h2 {
 		border-top-left-radius: 1em;
 		border-top-right-radius: 1em;
 	}
+
+	/*Resultaten pagina: responsive articles*/
+	section.pagina div {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
 }
 
 @media(min-width: 78em) {
-	/* responsive maken artikelen 4-koloms-grid*/
+	/*Overzichtspagina: responsive maken artikelen 4-koloms-grid*/
 	section div:nth-of-type(2) {
 		grid-template-columns: 18.5% 18.5% 18.5% 18.5%;
 		grid-gap: 5em;
@@ -1113,13 +1149,13 @@ section.lijst h2 {
 		margin: 0 auto;
 	}
 
+	section#sorteren {
+		margin-right: 4%;
+	}
+
 	#grid {
 		max-width: 90em;
 		margin: 0 auto;
-	}
-
-	#sorteren {
-		margin-right: 2%;
 	}
 
 }
@@ -1130,8 +1166,32 @@ section.lijst h2 {
 		background-position: 0 4em;
 	}
 
-	/*h1 homepage wordt groter*/
+	/*Overzichtspagina: h1*/
 	body section:nth-of-type(1) h1 {
 		font-size: 3.5em;
+	}
+
+	/*Mijn verhalen pagina*/
+	section.pagina > button {
+		top: 13.3em;
+		left: 14.5em;
+	}
+
+	section.pagina > button.show {
+		top: 13.3em;
+		left: 16.6em;
+	}
+
+	section.pagina > div#balk {
+		top: 13.9em;
+		left: 15em;
+	}
+
+	#melding.show {
+		position: absolute;
+		top: 7.45em;
+		left: 9.8em;
+		opacity: 1;
+		z-index: 1;
 	}
 }
