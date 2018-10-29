@@ -517,12 +517,20 @@ body > footer img {
 body.no-background {
 	background-image: none;
 	background-color: #f3e5d8;
+	background-size: 100%;
 }
 
 
 /*VERHAALPAGINA*/
 
-section.img-verhaal img {}
+#img-verhaal {
+	margin-bottom: 1150%;
+}
+
+section#img-verhaal img:nth-of-type(2),
+section#img-verhaal img:nth-of-type(3) {
+	display: none;
+}
 
 section#verhaalinfo {
 	display: flex;
@@ -543,7 +551,6 @@ section#verhaalinfo h1 {
 }
 
 section#verhaalinfo p {
-	font-family: "Nexa Bold", helvetica, sans-serif;
 	font-size: 1.4em;
 	margin: 0 3.5em;
 }
@@ -571,6 +578,31 @@ section#verhaalinfo button:hover {
 section#verhaalinfo button:active {
 	box-shadow: 0 -0.1875em 0.0625em #120145;
 	background-color: #ff3268;
+}
+
+section#beoordeling {
+	background-color: #f3e5d8;
+	height: 25em;
+	margin: 0 auto;
+}
+
+section#beoordeling h2 {
+	display: block;
+	margin: 0.5em 1em;
+	padding: 0.5em 0;
+}
+
+section#beoordeling p {
+	margin: 1em 12% 1em 12%;
+	padding: 0.5em;
+	font-size: 2em;
+	background-color: #f5f8fa;
+}
+
+section#beoordeling p:after {
+	content: url(../images/ster-blauw.png) url(../images/ster-blauw.png) url(../images/ster-blauw.png) url(../images/ster-blauw.png) url(../images/ster-blauw.png);
+	display: block;
+	margin: 0 2em;
 }
 
 /*'MIJN VERHALEN', 'DOWNLOADS', 'MIJN LIJSTEN'*/
@@ -931,13 +963,25 @@ section.lijst h2 {
 	}
 
 	/*Verhaalpagina: formaat Tablet*/
-	#img-verhaal {
-		background-color: none;
-		background-image: url(../images/verhaalIpad.png);
-		background-size: 140%;
-		background-position: -10em -3em;
-		width: 100%;
-		height: 400em;
+	section#img-verhaal {
+		margin-bottom: 830%;
+	}
+
+	section#img-verhaal img:nth-of-type(2) {
+		display: block;
+		width: 150%;
+		position: absolute;
+		left: -12.5em;
+	}
+
+	section#img-verhaal img:nth-of-type(1),
+	section#img-verhaal img:nth-of-type(3) {
+		display: none;
+	}
+
+	section#beoordeling p {
+		margin: 1em 28% 1em 28%;
+		padding: 0.5em;
 	}
 
 	/*Resultatenpagina: responsive articles*/
@@ -983,13 +1027,20 @@ section.lijst h2 {
 	}
 
 	/*Verhaalpagina: formaat Desktop*/
-	#img-verhaal {
-		background-color: none;
-		background-image: url(../images/verhaalDesktop.png);
-		background-size: 100%;
-		background-position: -10em 0;
-		width: 123%;
-		height: 500em;
+	section#img-verhaal {
+		margin-bottom: 630%;
+	}
+
+	section#img-verhaal img:nth-of-type(3) {
+		display: block;
+		width: 130%;
+		position: absolute;
+		left: -12.5em;
+	}
+
+	section#img-verhaal img:nth-of-type(1),
+	section#img-verhaal img:nth-of-type(2) {
+		display: none;
 	}
 }
 
