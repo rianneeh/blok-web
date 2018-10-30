@@ -665,6 +665,7 @@ section.pagina > button {
 	background-color: #969696;
 	height: 1em;
 	left: 16em;
+	max-width: 1em;
 	padding: 1em;
 	position: absolute;
 	top: 10.55em;
@@ -676,9 +677,11 @@ section.pagina > button.show {
 	background-color: #969696;
 	height: 1em;
 	left: 18.5em;
+	max-width: 1em;
 	padding: 1em;
 	position: absolute;
 	top: 10.55em;
+	width: 1em;
 }
 
 section.pagina > div#balk {
