@@ -669,6 +669,7 @@ section.pagina > button {
 	position: absolute;
 	top: 10.55em;
 	transition: all 1s;
+	width: 1em;
 }
 
 section.pagina > button.show {
