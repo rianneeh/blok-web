@@ -20,8 +20,11 @@ Voor deze website zijn geen speciale installaties nodig.
   - Overzichtspagina;
   - Loginpagina;
   - Verhaalpagina;
-  - Media queries
+  - Mijn verhalen, downloads en mijn lijsten pagina's;
+  - Resultaten pagina;
+  - Griekenland pagina;
+  - Mijn lijsten pagina;
+  - Media queries.
  
  # Auteur
- 
   - Rianne Hoenderdos
